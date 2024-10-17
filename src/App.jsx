@@ -38,7 +38,7 @@ function App() {
   return (
     <>
         <Navbar />
-        <RouterProvider router={appRouter}/>
+        <RouterProvider router={appRouter} basename="/"/>
         <Footer />
       
     </>

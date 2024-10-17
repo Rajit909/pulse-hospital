@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom"; // Import Link for client-side routing
 import { GiHospital } from "react-icons/gi";
 import { HiMenuAlt3 } from "react-icons/hi";
 import {
@@ -60,7 +59,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <nav className="bg-white dark:bg-darkbg dark:text-[darktext] shadow top-0 sticky z-[1015]">
+      <nav className="bg-white dark:bg-darkbg dark:text-[darktext] shadow dark:bg-[#F5F5F5 ] top-0 sticky z-[1015]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
@@ -68,45 +67,45 @@ const Navbar = () => {
                 size={28}
                 className="text-[#121829] dark:text-white font-bold"
               />
-              <Link to="/">
+              <a href="/">
                 <span className="text-2xl font-bold text-[#121829] dark:text-white ml-1">
                   Pulse Hospital
                 </span>
-              </Link>
+              </a>
             </div>
             <div className="hidden md:block">
-              <div className="flex items-center gap-8">
+              <div className=" flex items-center gap-8">
                 <div className="flex space-x-4">
-                  <Link
-                    to="/"
+                  <a
+                    href="/"
                     className="text-gray-800 dark:text-white hover:text-blue-600"
                   >
                     Home
-                  </Link>
-                  <Link
-                    to="/about"
+                  </a>
+                  <a
+                    href="/about"
                     className="text-gray-800 dark:text-white hover:text-blue-600"
                   >
                     About Us
-                  </Link>
-                  <Link
-                    to="/services"
+                  </a>
+                  <a
+                    href="/services"
                     className="text-gray-800 dark:text-white hover:text-blue-600"
                   >
                     Services
-                  </Link>
-                  <Link
-                    to="/doctors"
+                  </a>
+                  <a
+                    href="/doctors"
                     className="text-gray-800 dark:text-white hover:text-blue-600"
                   >
                     Our Doctors
-                  </Link>
-                  <Link
-                    to="/contact"
+                  </a>
+                  <a
+                    href="/contact"
                     className="text-gray-800 dark:text-white hover:text-blue-600"
                   >
                     Contact
-                  </Link>
+                  </a>
                 </div>
                 <button
                   onClick={toggleTheme}
@@ -118,7 +117,7 @@ const Navbar = () => {
             </div>
 
             <div className="md:hidden">
-              <div className="flex items-center">
+              <div className=" flex items-center">
                 <button
                   onClick={toggleTheme}
                   className="text-md dark:text-2xl font-bold bg-zinc-200 p-2 rounded-full cursor-pointer dark:text-white dark:bg-gray-900 dark:hover:text-white hover:dark:bg-[#1a83c6] text-black mr-4"
@@ -127,7 +126,7 @@ const Navbar = () => {
                 </button>
                 <button
                   onClick={toggleMenu}
-                  className="text-gray-800 dark:text-white focus:outline-none hover:text-gray-600"
+                  className="text-gray-800 dark:text-white focus:outline-none hover:text-gray-600 "
                 >
                   <HiMenuAlt3
                     size={30}
@@ -142,41 +141,36 @@ const Navbar = () => {
         {/* Mobile Menu */}
         <div className={`${isOpen ? "block" : "hidden"} md:hidden`}>
           <div className="px-8 pt-2 pb-3 space-y-1">
-            <Link
-              to="/"
+            <a
+              href="/"
               className="block text-gray-800 dark:text-white hover:text-blue-600"
-              onClick={() => setIsOpen(false)}
             >
               Home
-            </Link>
-            <Link
-              to="/about"
+            </a>
+            <a
+              href="/about"
               className="block text-gray-800 dark:text-white hover:text-blue-600"
-              onClick={() => setIsOpen(false)}
             >
               About Us
-            </Link>
-            <Link
-              to="/services"
+            </a>
+            <a
+              href="/services"
               className="block text-gray-800 dark:text-white hover:text-blue-600"
-              onClick={() => setIsOpen(false)}
             >
               Services
-            </Link>
-            <Link
-              to="/doctors"
+            </a>
+            <a
+              href="/doctors"
               className="block text-gray-800 dark:text-white hover:text-blue-600"
-              onClick={() => setIsOpen(false)}
             >
               Our Doctors
-            </Link>
-            <Link
-              to="/contact"
+            </a>
+            <a
+              href="/contact"
               className="block text-gray-800 dark:text-white hover:text-blue-600"
-              onClick={() => setIsOpen(false)}
             >
               Contact
-            </Link>
+            </a>
           </div>
         </div>
       </nav>
