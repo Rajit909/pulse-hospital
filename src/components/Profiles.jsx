@@ -1,8 +1,11 @@
 import React from 'react'
+import DoctorsSection from './DoctorsSection'
 
 const Profiles = () => {
   return (
-    <div>Doctor's Profiles</div>
+    <>
+    <DoctorsSection />
+    </>
   )
 }
 

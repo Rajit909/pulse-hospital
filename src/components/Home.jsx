@@ -6,10 +6,13 @@ import Profiles from './Profiles'
 import Appointment from './Appointment'
 import Testimonials from './Testimonials'
 import Contact from './Contact'
+import Navbar from './shared/Navbar'
+import Footer from './shared/Footer'
 
 const Home = () => {
   return (
     <>
+    <Navbar/>
         {/* Hero section */}
         <Hero />
         {/* About us section */}
@@ -18,12 +21,15 @@ const Home = () => {
         <Services />
         {/*Doctors profiles  section */}
         <Profiles/>
-        {/*Appointment booking  section */}
-        <Appointment/>
+        
         {/* Testimonials section */}
         <Testimonials />
+        {/*Appointment booking  section */}
+        <Appointment/>
         {/* Contact section */}
         <Contact/>
+
+        <Footer/>
 
     </>
   )

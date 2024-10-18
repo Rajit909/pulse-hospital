@@ -1,12 +1,10 @@
 import "./App.css";
 import Home from "./components/Home";
-import Navbar from "./components/shared/Navbar";
-import Footer from "./components/shared/Footer";
-import Services from "./components/Services";
-import Contact from "./components/Contact";
 import Profiles from "./components/Profiles";
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import AboutUs from "./pages/About-us";
+import ContactUsPage from "./pages/ContactUsPage";
+import ServicesPage from "./pages/ServicesPage";
 
 
 
@@ -23,11 +21,11 @@ function App() {
     }, 
     {
       path: "/Services",
-      element: <Services/>
+      element: <ServicesPage/>
     },
     {
       path: "/contact",
-      element: <Contact/>
+      element: <ContactUsPage/>
     },
     {
       path: "/doctors",
@@ -37,9 +35,7 @@ function App() {
   ])
   return (
     <>
-        <Navbar />
         <RouterProvider router={appRouter} basename="/"/>
-        <Footer />
       
     </>
   );

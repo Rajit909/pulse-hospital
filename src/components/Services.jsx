@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   return (
@@ -12,78 +13,34 @@ const Services = () => {
             We are here for 24x7.
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8">
-            <div className="p-2 bg-white rounded-xl shadow flex flex-col items-center text-center">
-              <img
-                src="https://via.placeholder.com/100"
-                alt="Service"
-                className="mb-4 rounded-full"
-              />
-              <h3 className="text-xl font-semibold mb-2">Expert Doctors</h3>
-              <p className="text-gray-600">
-                A team of skilled and experienced medical professionals.
-              </p>
+            <div className="p-2 bg-white dark:bg-slate-800 rounded-xl shadow-md flex flex-col items-center text-center transition-all duration-300 hover:scale-[103%]">
+              <img src="/doctor.png" width={150} />
+              <h1 className=" text-gray-800 pb-2 text-4xl font-bold mt-8 dark:text-white">
+                Expert Doctors
+              </h1>
             </div>
-            <div className="p-6 bg-white rounded-xl shadow flex flex-col items-center text-center">
-              <img
-                src="https://via.placeholder.com/100"
-                alt="Service"
-                className="mb-4 rounded-full"
-              />
-              <h3 className="text-xl font-semibold mb-2">24x7 Diagnostic Facility</h3>
-              <p className="text-gray-600">
-                State-of-the-art facilities for advanced medical care.
-              </p>
+            <div className="p-2 bg-white dark:bg-slate-800 rounded-xl shadow-md flex flex-col items-center text-center transition-all duration-300 hover:scale-[103%]">
+              {/* <a href="https://www.flaticon.com/free-icons/diagnosis" title="diagnosis icons">Diagnosis icons created by kliwir art - Flaticon</a> */}
+              <img src="/diagnostic.png" width={150} />
+              <h1 className=" text-gray-800 pb-2 text-4xl font-bold mt-8 dark:text-white">
+                24x7 Diagnostic Facility
+              </h1>
             </div>
-            <div className="p-6 bg-white rounded-xl shadow flex flex-col items-center text-center">
-              <img
-                src="https://via.placeholder.com/100"
-                alt="Service"
-                className="mb-4 rounded-full"
-              />
-              <h3 className="text-xl font-semibold mb-2">Emergency Services</h3>
-              <p className="text-gray-600">
-                24/7 emergency services to handle urgent health issues.
-              </p>
-            </div>
-            <div className="p-6 bg-white rounded-xl shadow flex flex-col items-center text-center">
-              <img
-                src="https://via.placeholder.com/100"
-                alt="Service"
-                className="mb-4 rounded-full"
-              />
-              <h3 className="text-xl font-semibold mb-2">
-                Patient-Centered Care
+            <div className="p-2 bg-white dark:bg-slate-800 rounded-xl shadow-md flex flex-col items-center text-center transition-all duration-300 hover:scale-[103%]">
+              <img src="/emergency-call.png" width={150} />
+              <h3 className="text-gray-800 pb-2 text-4xl font-bold mt-8 dark:text-white">
+                Emergency Services
               </h3>
-              <p className="text-gray-600">
-                Compassionate and personalized care for every patient.
-              </p>
             </div>
-            <div className="p-6 bg-white rounded-xl shadow flex flex-col items-center text-center">
-              <img
-                src="https://via.placeholder.com/100"
-                alt="Service"
-                className="mb-4 rounded-full"
-              />
-              <h3 className="text-xl font-semibold mb-2">
-              24x7 Ambulance Facility
-              </h3>
-              <p className="text-gray-600">
-                Compassionate and personalized care for every patient.
-              </p>
+
+            <div className=" flex items-center justify-center">
+              <button className=" py-1 ">
+                <Link to={"/services"} className=" font-semibold bg-blue-700 rounded px-3 py-[5px]">
+                  More Services
+                </Link>
+              </button>
             </div>
-            <div className="p-6 bg-white rounded-xl shadow flex flex-col items-center text-center">
-              <img
-                src="https://via.placeholder.com/100"
-                alt="Service"
-                className="mb-4 rounded-full"
-              />
-              <h3 className="text-xl font-semibold mb-2">
-              24x7 Pharmacy Facility
-              </h3>
-              <p className="text-gray-600">
-                Compassionate and personalized care for every patient.
-              </p>
-            </div>
+           
           </div>
         </div>
       </section>

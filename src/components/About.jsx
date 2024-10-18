@@ -14,13 +14,13 @@ const About = () => {
             <h2 className="text-3xl font-bold mb-4 text-blue-600">
               About Pulse Hospital
             </h2>
-            <p className="text-lg mb-6 max-w-xl text-wrap text-gray-700 dark:text-white">
+            <p className="text-lg mb-6 max-w-xl text-wrap text-gray-700 dark:text-white text-justify">
               At Pulse Hospital, we are dedicated to providing high-quality,
               compassionate healthcare to our community. With state-of-the-art
               facilities and a team of experienced professionals, we offer a
               range of medical services to meet your health needs.
             </p>
-            <p className="text-lg mb-6 max-w-xl text-wrap text-gray-700 dark:text-white">
+            <p className="text-lg mb-6 max-w-xl text-wrap text-gray-700 dark:text-white text-justify">
               We believe in a holistic approach to healthcare, addressing not
               only physical ailments but also emotional and mental well-being.
             </p>
@@ -41,7 +41,7 @@ const About = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row py-16 items-center justify-center gap-20 ">
-          <div className=" flex flex-col  justify-between items-center  gap-4 p-8  px-16">
+          <div className=" flex flex-col  justify-between items-center  gap-4 p-8  px-16 transition-all duration-300 hover:scale-[103%]">
             <LiaMicroscopeSolid size={150} className="text-blue-800" />
             <div className=" text-3xl font-bold text-blue-600">15+</div>
             <h1 className=" text-[24px] font-[Poppins, sans-serif] font-bold text-blue-600">
@@ -49,14 +49,14 @@ const About = () => {
             </h1>
           </div>
           
-          <div className=" flex flex-col  justify-center items-center  gap-4 p-8  px-16">
+          <div className=" flex flex-col  justify-center items-center  gap-4 p-8  px-16 transition-all duration-300 hover:scale-[103%]">
             <FaUserDoctor size={150} className="text-blue-800" />
             <div className=" text-3xl font-bold text-blue-600">20+</div>
             <h1 className=" text-[24px] font-[Poppins, sans-serif] font-bold text-blue-600">
               Our Doctors
             </h1>
           </div>
-          <div className=" flex flex-col  justify-center items-center  gap-4 p-8 px-16">
+          <div className=" flex flex-col  justify-center items-center  gap-4 p-8 px-16 transition-all duration-300 hover:scale-[103%]">
           <IoIosHeartEmpty size={150} className="text-blue-800" />
             <div className=" text-3xl font-bold text-blue-600">1000+</div>
             <h1 className=" text-[24px] font-[Poppins, sans-serif] font-bold text-blue-600">

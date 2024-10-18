@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from "react";
+import { CiDark } from "react-icons/ci";
 import { GiHospital } from "react-icons/gi";
 import { HiMenuAlt3 } from "react-icons/hi";
 import {
-  MdOutlineLightMode,
-  MdDarkMode,
+  
   MdAddCall,
   MdOutlineEmail,
+  MdLightMode,
 } from "react-icons/md";
 import {
   TiSocialFacebook,
   TiSocialLinkedin,
   TiSocialTwitter,
 } from "react-icons/ti";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false); // State to handle mobile menu toggle
@@ -67,51 +69,51 @@ const Navbar = () => {
                 size={28}
                 className="text-[#121829] dark:text-white font-bold"
               />
-              <a href="/">
+              <Link to="/">
                 <span className="text-2xl font-bold text-[#121829] dark:text-white ml-1">
                   Pulse Hospital
                 </span>
-              </a>
+              </Link>
             </div>
             <div className="hidden md:block">
               <div className=" flex items-center gap-8">
                 <div className="flex space-x-4">
-                  <a
-                    href="/"
+                  <Link
+                    to="/"
                     className="text-gray-800 dark:text-white hover:text-blue-600"
                   >
                     Home
-                  </a>
-                  <a
-                    href="/about"
+                  </Link>
+                  <Link
+                    to="/about"
                     className="text-gray-800 dark:text-white hover:text-blue-600"
                   >
                     About Us
-                  </a>
-                  <a
-                    href="/services"
+                  </Link>
+                  <Link
+                    to="/services"
                     className="text-gray-800 dark:text-white hover:text-blue-600"
                   >
                     Services
-                  </a>
-                  <a
-                    href="/doctors"
+                  </Link>
+                  {/* <Link
+                    to="/doctors"
                     className="text-gray-800 dark:text-white hover:text-blue-600"
                   >
                     Our Doctors
-                  </a>
-                  <a
-                    href="/contact"
+                  </Link> */}
+                  <Link
+                    to="/contact"
                     className="text-gray-800 dark:text-white hover:text-blue-600"
                   >
                     Contact
-                  </a>
+                  </Link>
                 </div>
                 <button
                   onClick={toggleTheme}
                   className="text-xl font-bold bg-zinc-200 p-2 rounded-full cursor-pointer dark:text-white dark:bg-gray-900 dark:hover:text-white hover:dark:bg-[#1a83c6] text-black"
                 >
-                  {theme === "light" ? <MdDarkMode /> : <MdOutlineLightMode />}
+                  {theme === "light" ?<CiDark /> : <MdLightMode />}
                 </button>
               </div>
             </div>
@@ -122,7 +124,7 @@ const Navbar = () => {
                   onClick={toggleTheme}
                   className="text-md dark:text-2xl font-bold bg-zinc-200 p-2 rounded-full cursor-pointer dark:text-white dark:bg-gray-900 dark:hover:text-white hover:dark:bg-[#1a83c6] text-black mr-4"
                 >
-                  {theme === "light" ? <MdDarkMode /> : <MdOutlineLightMode />}
+                  {theme === "light" ? <CiDark /> : <MdLightMode />}
                 </button>
                 <button
                   onClick={toggleMenu}
@@ -141,36 +143,36 @@ const Navbar = () => {
         {/* Mobile Menu */}
         <div className={`${isOpen ? "block" : "hidden"} md:hidden`}>
           <div className="px-8 pt-2 pb-3 space-y-1">
-            <a
-              href="/"
+            <Link
+              to="/"
               className="block text-gray-800 dark:text-white hover:text-blue-600"
             >
               Home
-            </a>
-            <a
-              href="/about"
+            </Link>
+            <Link
+              to="/about"
               className="block text-gray-800 dark:text-white hover:text-blue-600"
             >
               About Us
-            </a>
-            <a
-              href="/services"
+            </Link>
+            <Link
+              to="/services"
               className="block text-gray-800 dark:text-white hover:text-blue-600"
             >
               Services
-            </a>
-            <a
+            </Link>
+            {/* <a
               href="/doctors"
               className="block text-gray-800 dark:text-white hover:text-blue-600"
             >
               Our Doctors
-            </a>
-            <a
-              href="/contact"
+            </a> */}
+            <Link
+              to="/contact"
               className="block text-gray-800 dark:text-white hover:text-blue-600"
             >
               Contact
-            </a>
+            </Link>
           </div>
         </div>
       </nav>

@@ -1,8 +1,13 @@
 import React from "react";
+import Footer from "../components/shared/Footer";
+import Navbar from "../components/shared/Navbar";
+import DoctorsSection from "../components/DoctorsSection";
+import Testimonials from "../components/Testimonials";
 
 const AboutUs = () => {
   return (
-    <div>
+    <>
+    <Navbar/>
       {/* Hero Section */}
       <section className="relative bg-cover bg-center h-[400px]" style={{ backgroundImage: "url('/bgimg.jpg')" }}>
         <div className="absolute inset-0 bg-blue-700 bg-opacity-50 flex items-center justify-center">
@@ -14,19 +19,19 @@ const AboutUs = () => {
       </section>
 
       {/* Mission, Vision, Values */}
-      <section className="py-12 bg-gray-100">
+      <section className="py-12 bg-gray-100 dark:bg-darkbg dark:text-white">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-8">Our Mission, Vision, and Values</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded shadow-lg">
+            <div className="bg-white p-6 rounded shadow-lg dark:bg-slate-800">
               <h3 className="text-xl font-semibold mb-4">Our Mission</h3>
               <p>To provide high-quality healthcare with a focus on patient-centered care and medical excellence.</p>
             </div>
-            <div className="bg-white p-6 rounded shadow-lg">
+            <div className="bg-white p-6 rounded shadow-lg dark:bg-slate-800">
               <h3 className="text-xl font-semibold mb-4">Our Vision</h3>
               <p>To be recognized as a leading healthcare provider in the region, offering innovative medical solutions and compassionate care.</p>
             </div>
-            <div className="bg-white p-6 rounded shadow-lg">
+            <div className="bg-white p-6 rounded shadow-lg dark:bg-slate-800">
               <h3 className="text-xl font-semibold mb-4">Our Values</h3>
               <p>Integrity, compassion, excellence, respect, and teamwork form the foundation of everything we do.</p>
             </div>
@@ -35,7 +40,7 @@ const AboutUs = () => {
       </section>
 
       {/* History and Achievements */}
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-white dark:bg-darkbg dark:text-white">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">Our History & Achievements</h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -56,55 +61,35 @@ const AboutUs = () => {
       </section>
 
       {/* Meet Our Team */}
-      <section className="py-12 bg-gray-100">
+      <section className="py-12 bg-gray-100 dark:bg-darkbg dark:text-white">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-8">Meet Our Dedicated Team</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded shadow-lg">
-              <img src="https://via.placeholder.com/150" alt="Doctor" className="rounded-full mb-4 mx-auto"/>
-              <h3 className="text-xl font-semibold mb-2">Dr. Sarah Johnson</h3>
-              <p>Chief Surgeon</p>
-            </div>
-            <div className="bg-white p-6 rounded shadow-lg">
-              <img src="https://via.placeholder.com/150" alt="Doctor" className="rounded-full mb-4 mx-auto"/>
-              <h3 className="text-xl font-semibold mb-2">Dr. Michael Lee</h3>
-              <p>Head of Cardiology</p>
-            </div>
-            <div className="bg-white p-6 rounded shadow-lg">
-              <img src="https://via.placeholder.com/150" alt="Doctor" className="rounded-full mb-4 mx-auto"/>
-              <h3 className="text-xl font-semibold mb-2">Dr. Emily Davis</h3>
-              <p>Lead Pediatrician</p>
-            </div>
+          <div className="">
+           <DoctorsSection/>
           </div>
         </div>
       </section>
 
       {/* Patient Testimonials */}
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-white dark:bg-darkbg dark:text-white">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-8">What Our Patients Say</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gray-100 p-6 rounded shadow-lg">
-              <p className="text-lg mb-4">"Pulse Hospital provided excellent care during my treatment. The staff is extremely professional and compassionate. I highly recommend them!"</p>
-              <p className="font-semibold">- John Smith</p>
-            </div>
-            <div className="bg-gray-100 p-6 rounded shadow-lg">
-              <p className="text-lg mb-4">"The doctors at Pulse Hospital are knowledgeable and attentive. They made me feel comfortable throughout my entire experience."</p>
-              <p className="font-semibold">- Maria Garcia</p>
-            </div>
-          </div>
+      <div>
+        <Testimonials/>
+      </div>
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="py-12 bg-blue-600 text-white text-center">
+      <section className="py-12 bg-blue-600 text-white text-center dark:bg-darkbg">
         <h2 className="text-3xl font-bold mb-4">Ready to Take the Next Step?</h2>
         <p className="text-xl mb-6">Contact us today to schedule an appointment or learn more about our services.</p>
         <button className="bg-white text-blue-600 px-6 py-3 rounded font-bold hover:bg-gray-100">
           Schedule an Appointment
         </button>
       </section>
-    </div>
+      <Footer/>
+    </>
   );
 };
 
