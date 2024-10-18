@@ -13,7 +13,7 @@ const Contact = () => {
           className="relative h-[300px] overflow-hidden bg-cover bg-[50%] bg-no-repeat "
         >
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11672.945750644447!2d-122.42107853750231!3d37.7730507907087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858070cc2fbd55%3A0xa71491d736f62d5c!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1619524992238!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3511.6406968876386!2d79.4165974754901!3d28.339473275826098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a000da2f6ff833%3A0x42f076f51487b88a!2s14%2C%20Civil%20Lines%2C%20Bhatnagar%20Colony%2C%20Civil%20Lines%2C%20Bareilly%2C%20Uttar%20Pradesh%20243001!5e0!3m2!1sen!2sin!4v1729263516241!5m2!1sen!2sin"
             width="100%"
             height="480"
             style={{ border: "0" }}
