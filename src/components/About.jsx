@@ -10,7 +10,7 @@ const About = () => {
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8 mx-auto items-center py-16">
           {/* Text Content */}
-          <div className=" mx-auto">
+          <div className=" mx-auto" data-aos="fade-right">
             <h2 className="text-3xl font-bold mb-4 text-blue-600">
               About Pulse Hospital
             </h2>
@@ -31,7 +31,7 @@ const About = () => {
             </Link>
           </div>
           {/* Hospital image */}
-          <div className="mx-auto">
+          <div className="mx-auto" data-aos="fade-left">
             <img
               src="/bgimg.jpg"
               alt="Hospital image"
@@ -40,7 +40,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row py-16 items-center justify-center gap-20 ">
+        <div className="flex flex-col lg:flex-row py-16 items-center justify-center gap-20 " data-aos="fade-up">
           <div className=" flex flex-col  justify-between items-center  gap-4 p-8  px-16 transition-all duration-300 hover:scale-[103%]">
             <LiaMicroscopeSolid size={150} className="text-blue-800" />
             <div className=" text-3xl font-bold text-blue-600">15+</div>

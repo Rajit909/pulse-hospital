@@ -14,7 +14,7 @@ const Testimonials = () => {
 
   return (
     <>
-      <section className="relative py-12 mx-auto bg-blue-100 dark:bg-darkbg">
+      <section className="relative py-12 mx-auto bg-gray-100 dark:bg-darkbg">
       <h2 className="text-3xl font-bold text-center mb-8 text-blue-500">What Our Patients Say?</h2>
         <div className=" mx-10 md:mx-30">
 

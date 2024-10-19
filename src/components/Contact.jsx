@@ -8,7 +8,17 @@ const Contact = () => {
   return (
     <>
       <section className=" mx-auto max-w-full dark:bg-darkbg pb-4">
-        <div
+
+      <div className=" max-w-3xl mx-auto text-center pb-10" data-aos-duration="3000" data-aos="fade-up">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-800 dark:text-white border-b-4 mx-40 md:mx-60 border-blue-500">Contact Us</h2>
+          <p className="md:text-lg text-gray-700 mb-8 dark:text-white">
+            We’d love to hear from you! Whether you have a question, feedback,
+            or need assistance, feel free to reach out to us. Our team is here
+            to help you.
+          </p>
+        </div>
+        <div 
+          data-aos-duration="3000" data-aos="zoom-in"
           id="map"
           className="relative h-[300px] overflow-hidden bg-cover bg-[50%] bg-no-repeat "
         >
@@ -21,8 +31,8 @@ const Contact = () => {
             loading="lazy"
           ></iframe>
         </div>
-        <div className="container mx-auto md:px-12 ">
-          <div className="block rounded-lg bg-[hsla(0,0%,100%,0.8)] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  md:py-16 md:px-12 -mt-[100px] backdrop-blur-[30px] border border-gray-300 dark:bg-slate-700">
+        <div className="container mx-auto md:px-12 " data-aos-duration="3000" data-aos="fade-up">
+          <div className="block rounded-lg bg-[hsla(0,0%,100%,0.8)] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  md:py-16 md:px-12 -mt-[100px] backdrop-blur-[30px] border border-gray-300 dark:bg-slate-800">
             <div className="flex flex-wrap">
               <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6">
                 <form>
@@ -93,7 +103,7 @@ const Contact = () => {
                         <p className="mb-2 font-bold dark:text-white">
                           Technical support
                         </p>
-                        <p className="text-sm text-neutral-500 dark:text-gray-200">
+                        <p className="text-sm text-neutral-700 dark:text-gray-200">
                           example@gmail.com
                         </p>
                       
@@ -111,7 +121,7 @@ const Contact = () => {
                         <p className="mb-2 font-bold dark:text-white">
                           Address
                         </p>
-                        <p className="text-sm text-neutral-500 dark:text-gray-200 text-justify">
+                        <p className="text-sm text-neutral-700 dark:text-gray-200 text-justify">
                           14 Civil Lines, Khurram Gautia Road near brBiyavani
                           Kothi, Bareilly, India, Uttar Pradesh
                         </p>
@@ -127,7 +137,7 @@ const Contact = () => {
                       </div>
                       <div className="ml-6 grow">
                         <p className="mb-2 font-bold  dark:text-white">Mobile</p>
-                        <p className="text-neutral-500 dark:text-gray-200">+91-96812 75415</p>
+                        <p className="text-neutral-700 dark:text-gray-200">+91-96812 75415</p>
                       </div>
                     </div>
                   </div>
@@ -140,7 +150,7 @@ const Contact = () => {
                       </div>
                       <div className="ml-6 grow">
                         <p className="mb-2 font-bold dark:text-white">Working days</p>
-                        <p className="text-neutral-500 dark:text-gray-200"> Monday to Fri</p>
+                        <p className="text-neutral-700 dark:text-gray-200"> Monday to Fri</p>
                       </div>
                     </div>
                   </div>

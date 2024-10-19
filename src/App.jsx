@@ -5,6 +5,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import AboutUs from "./pages/About-us";
 import ContactUsPage from "./pages/ContactUsPage";
 import ServicesPage from "./pages/ServicesPage";
+import News from "./pages/News";
+import TestimonialsPage from "./pages/TestimonialsPage";
 
 
 
@@ -30,6 +32,14 @@ function App() {
     {
       path: "/doctors",
       element: <Profiles/>
+    },
+    {
+      path: "/news",
+      element: <News/>
+    },
+    {
+      path: "/testimonials",
+      element: <TestimonialsPage/>
     }
     
   ])

@@ -1,55 +1,69 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
-const Appointment = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    doctor: "",
-    date: "",
-    time: "",
-    message: "",
-  });
 
-  const doctors = [
-    "Doctor 1",
-    "Doctor 2",
-    "Doctor 3",
-    "Doctor 4",
-    "Doctor 5",
-  ];
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Form validation (basic example)
-    if (!formData.name || !formData.email || !formData.phone || !formData.doctor || !formData.date || !formData.time) {
-      alert("Please fill in all required fields.");
-      return;
-    }
-    // Handle form submission (e.g., send to an API)
-    console.log("Appointment Request:", formData);
-    alert("Appointment request sent successfully!");
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      doctor: "",
-      date: "",
-      time: "",
-      message: "",
-    });
-  };
-
+const AppointmentModal = () => {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        doctor: "",
+        date: "",
+        time: "",
+        message: "",
+      });
+    
+      const doctors = [
+        "Doctor 1",
+        "Doctor 2",
+        "Doctor 3",
+        "Doctor 4",
+        "Doctor 5",
+      ];
+    
+      const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+      };
+    
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        // Form validation (basic example)
+        if (!formData.name || !formData.email || !formData.phone || !formData.doctor || !formData.date || !formData.time) {
+          alert("Please fill in all required fields.");
+          return;
+        }
+        // Handle form submission (e.g., send to an API)
+        console.log("Appointment Request:", formData);
+        alert("Appointment request sent successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          doctor: "",
+          date: "",
+          time: "",
+          message: "",
+        });
+      };
   return (
-    <section className="py-12 bg-gray-100 dark:bg-darkbg">
-      <div className="max-w-4xl mx-auto px-4" data-aos-duration="2000" data-aos="fade-up">
-        <h2 className="text-3xl font-bold text-center mb-8 text-blue-600">Book an Appointment</h2>
+    <>
+     <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-75">
+          <div className="relative w-full max-w-4xl">
+            <div className="flex justify-end">
+              {/* Close Button */}
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="text-white text-3xl font-bold p-2"
+              >
+                ✖
+              </button>
+            </div>
+
+            <section className="py-12 bg-gray-100 dark:bg-darkbg">
+      <div className="max-w-4xl mx-auto px-4" >
+        <h2 className="text-xl font-bold text-center mb-8 text-blue-600">Book an Appointment</h2>
         <form onSubmit={handleSubmit} className="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-md">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
             {/* Name Input */}
             <div>
               <label className="block text-gray-700 dark:text-white font-semibold mb-2" htmlFor="name">Full Name*</label>
@@ -59,7 +73,7 @@ const Appointment = () => {
                 id="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+                className=" px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
                 placeholder="Enter patient name"
                 required
               />
@@ -74,7 +88,7 @@ const Appointment = () => {
                 id="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+                className=" px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
                 placeholder="abc@example.com"
                 required
               />
@@ -95,24 +109,7 @@ const Appointment = () => {
               />
             </div>
 
-            {/* Doctor Selection */}
-            <div>
-              <label className="block text-gray-700 dark:text-white font-semibold mb-2" htmlFor="doctor">Select Doctor*</label>
-              <select
-                name="doctor"
-                id="doctor"
-                value={formData.doctor}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
-                required
-              >
-                <option value="">Choose a doctor</option>
-                {doctors.map((doctor, index) => (
-                  <option key={index} value={doctor}>{doctor}</option>
-                ))}
-              </select>
-            </div>
-
+            
             {/* Appointment Date */}
             <div>
               <label className="block text-gray-700 dark:text-white font-semibold mb-2" htmlFor="date">Appointment Date*</label>
@@ -168,7 +165,11 @@ const Appointment = () => {
         </form>
       </div>
     </section>
-  );
-};
 
-export default Appointment;
+          </div>
+        </div>
+    </>
+  )
+}
+
+export default AppointmentModal

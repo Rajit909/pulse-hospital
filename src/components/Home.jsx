@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Hero from './Hero'
 import About from './About'
 import Services from './Services'
@@ -9,7 +9,16 @@ import Contact from './Contact'
 import Navbar from './shared/Navbar'
 import Footer from './shared/Footer'
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Faq from './Faq'
+
 const Home = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    AOS.init({ duration: 1200 }); // You can set options like duration here
+  }, []);
+
   return (
     <>
     <Navbar/>
@@ -28,6 +37,8 @@ const Home = () => {
         <Appointment/>
         {/* Contact section */}
         <Contact/>
+
+        <Faq/>
 
         <Footer/>
 

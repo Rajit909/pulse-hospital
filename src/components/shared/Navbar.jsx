@@ -2,18 +2,13 @@ import React, { useEffect, useState } from "react";
 import { CiDark } from "react-icons/ci";
 import { GiHospital } from "react-icons/gi";
 import { HiMenuAlt3 } from "react-icons/hi";
-import {
-  
-  MdAddCall,
-  MdOutlineEmail,
-  MdLightMode,
-} from "react-icons/md";
+import { MdAddCall, MdOutlineEmail, MdLightMode } from "react-icons/md";
 import {
   TiSocialFacebook,
   TiSocialLinkedin,
   TiSocialTwitter,
 } from "react-icons/ti";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false); // State to handle mobile menu toggle
@@ -32,10 +27,16 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+
+  const navigate = useNavigate();
+
+  const location = useLocation();
+
   return (
+    
     <>
       {/* Top bar */}
-      <div className="bg-[#2A3855] text-white p-2 dark:border-b-[0.2px]">
+      <div className="hidden md:block bg-[#2A3855] text-white p-2 dark:border-b-[0.2px]">
         <div className="md:max-w-6xl mx-auto px-4 py-2 flex justify-between items-center">
           <div className="flex space-x-4">
             <span className="flex items-center gap-1">
@@ -78,42 +79,73 @@ const Navbar = () => {
             <div className="hidden md:block">
               <div className=" flex items-center gap-8">
                 <div className="flex space-x-4">
-                  <Link
-                    to="/"
-                    className="text-gray-800 dark:text-white hover:text-blue-600"
-                  >
-                    Home
-                  </Link>
-                  <Link
+                  {
+                    location.pathname !== "/" &&(
+                      <Link
+                        to="/"
+                        className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold
+                        "
+                      >
+                        Home
+                      </Link>
+                    )
+                  }
+                 {
+                  location.pathname !== "/about" &&(
+                    <Link
                     to="/about"
-                    className="text-gray-800 dark:text-white hover:text-blue-600"
+                    className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold
+                    "
                   >
                     About Us
-                  </Link>
-                  <Link
+                  </Link>)
+                 }
+                 {
+                  location.pathname !== "/services" &&(
+                     <Link
                     to="/services"
-                    className="text-gray-800 dark:text-white hover:text-blue-600"
+                    className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold
+                    "
                   >
                     Services
-                  </Link>
-                  {/* <Link
-                    to="/doctors"
-                    className="text-gray-800 dark:text-white hover:text-blue-600"
+                  </Link>)
+                 }
+                 {
+                  location.pathname !== "/testimonials" &&(
+                     <Link
+                    to="/testimonials"
+                    className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold
+                    "
                   >
-                    Our Doctors
-                  </Link> */}
-                  <Link
+                    Testimonials
+                  </Link>)
+                 }
+                  {
+                  location.pathname !== "/news" &&(
+                     <Link
+                    to="/news"
+                    className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold
+                    "
+                  >
+                    News & Updates
+                  </Link>)
+                 }
+                 {
+                  location.pathname !== "/contact" &&(
+                    <Link
                     to="/contact"
-                    className="text-gray-800 dark:text-white hover:text-blue-600"
+                    className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold
+                    "
                   >
                     Contact
-                  </Link>
+                  </Link>)
+                 }
                 </div>
                 <button
                   onClick={toggleTheme}
                   className="text-xl font-bold bg-zinc-200 p-2 rounded-full cursor-pointer dark:text-white dark:bg-gray-900 dark:hover:text-white hover:dark:bg-[#1a83c6] text-black"
                 >
-                  {theme === "light" ?<CiDark /> : <MdLightMode />}
+                  {theme === "light" ? <CiDark /> : <MdLightMode />}
                 </button>
               </div>
             </div>
@@ -142,37 +174,69 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div className={`${isOpen ? "block" : "hidden"} md:hidden`}>
-          <div className="px-8 pt-2 pb-3 space-y-1">
-            <Link
-              to="/"
-              className="block text-gray-800 dark:text-white hover:text-blue-600"
-            >
-              Home
-            </Link>
-            <Link
-              to="/about"
-              className="block text-gray-800 dark:text-white hover:text-blue-600"
-            >
-              About Us
-            </Link>
-            <Link
-              to="/services"
-              className="block text-gray-800 dark:text-white hover:text-blue-600"
-            >
-              Services
-            </Link>
-            {/* <a
-              href="/doctors"
-              className="block text-gray-800 dark:text-white hover:text-blue-600"
-            >
-              Our Doctors
-            </a> */}
-            <Link
-              to="/contact"
-              className="block text-gray-800 dark:text-white hover:text-blue-600"
-            >
-              Contact
-            </Link>
+          <div className="px-8 pt-2 pb-3 space-y-1 flex flex-col">
+          {
+                    location.pathname !== "/" &&(
+                      <Link
+                        to="/"
+                        className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold
+                        "
+                      >
+                        Home
+                      </Link>
+                    )
+                  }
+                 {
+                  location.pathname !== "/about" &&(
+                    <Link
+                    to="/about"
+                    className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold
+                    "
+                  >
+                    About Us
+                  </Link>)
+                 }
+                 {
+                  location.pathname !== "/services" &&(
+                     <Link
+                    to="/services"
+                    className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold
+                    "
+                  >
+                    Services
+                  </Link>)
+                 }
+                 {
+                  location.pathname !== "/testimonials" &&(
+                     <Link
+                    to="/testimonials"
+                    className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold
+                    "
+                  >
+                    Testimonials
+                  </Link>)
+                 }
+                 {
+                  location.pathname !== "/news" &&(
+                     <Link
+                    to="/news"
+                    className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold
+                    "
+                  >
+                    News & Updates
+                  </Link>)
+                 }
+               
+                 {
+                  location.pathname !== "/contact" &&(
+                    <Link
+                    to="/contact"
+                    className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold
+                    "
+                  >
+                    Contact
+                  </Link>)
+                 }
           </div>
         </div>
       </nav>
