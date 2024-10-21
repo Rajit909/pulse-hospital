@@ -14,7 +14,8 @@ import "aos/dist/aos.css";
 import Faq from './Faq'
 
 const Home = () => {
-  const [isLoading, setIsLoading] = useState(true);
+ 
+
   useEffect(() => {
     AOS.init({ duration: 1200 }); // You can set options like duration here
   }, []);
@@ -37,7 +38,7 @@ const Home = () => {
         <Appointment/>
         {/* Contact section */}
         <Contact/>
-
+        {/* FaQ */}
         <Faq/>
 
         <Footer/>

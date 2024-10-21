@@ -30,40 +30,40 @@ const ServicesPage = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8">
             <div className="p-2 bg-white dark:bg-slate-800 rounded-xl shadow-md flex flex-col items-center text-center transition-all duration-300 hover:scale-[103%]">
-              <img src="/doctor.png" width={150} />
-              <h1 className=" text-gray-800 pb-2 text-4xl font-bold mt-8 dark:text-white">
+              <img src="/doctor.png" className=' w-32 md:w-52'/>
+              <h1 className=" text-gray-800 pb-2 text-2xl md:text-4xl font-bold mt-8 dark:text-white">
                 Expert Doctors
               </h1>
             </div>
             <div className="p-2 bg-white dark:bg-slate-800 rounded-xl shadow-md flex flex-col items-center text-center transition-all duration-300 hover:scale-[103%]">
               {/* <a href="https://www.flaticon.com/free-icons/diagnosis" title="diagnosis icons">Diagnosis icons created by kliwir art - Flaticon</a> */}
-              <img src="/diagnostic.png" width={150} />
-              <h1 className=" text-gray-800 pb-2 text-4xl font-bold mt-8 dark:text-white">
+              <img src="/diagnostic.png" className=' w-32 md:w-52' />
+              <h1 className=" text-gray-800 pb-2 text-2xl md:text-4xl font-bold mt-8 dark:text-white">
                 24x7 Diagnostic Facility
               </h1>
             </div>
             <div className="p-2 bg-white dark:bg-slate-800 rounded-xl shadow-md flex flex-col items-center text-center transition-all duration-300 hover:scale-[103%]">
-              <img src="/emergency-call.png" width={150} />
-              <h3 className="text-gray-800 pb-2 text-4xl font-bold mt-8 dark:text-white">
+              <img src="/emergency-call.png" className=' w-32 md:w-52' />
+              <h3 className="text-gray-800 pb-2 text-2xl md:text-4xl font-bold mt-8 dark:text-white">
                 Emergency Services
               </h3>
             </div>
             <div className="p-2 bg-white dark:bg-slate-800 rounded-xl shadow-md flex flex-col items-center text-center transition-all duration-300 hover:scale-[103%]">
-              <img src="/doctor-visit.png" width={150} />
+              <img src="/doctor-visit.png" className=' w-32 md:w-52' />
 
-              <h3 className="text-gray-800 pb-2 text-4xl font-bold mt-8 dark:text-white">
+              <h3 className="text-gray-800 pb-2 text-2xl md:text-4xl font-bold mt-8 dark:text-white">
                 Patient-Centered Care
               </h3>
             </div>
             <div className="p-2 bg-white dark:bg-slate-800 rounded-xl shadow-md flex flex-col items-center text-center transition-all duration-300 hover:scale-[103%]">
-              <img src="/ambulance.png" width={150} />
-              <h3 className="text-gray-800 pb-2 text-4xl font-bold mt-8 dark:text-white">
+              <img src="/ambulance.png" className=' w-32 md:w-52' />
+              <h3 className="text-gray-800 pb-2 text-2xl md:text-4xl font-bold mt-8 dark:text-white">
                 24x7 Ambulance Facility
               </h3>
             </div>
             <div className="p-2 bg-white dark:bg-slate-800 rounded-xl shadow-md flex flex-col items-center text-center transition-all duration-300 hover:scale-[103%]">
-              <img src="/drugstore.png" width={150} />
-              <h3 className="text-gray-800 pb-2 text-4xl font-bold mt-8 dark:text-white">
+              <img src="/drugstore.png" className=' w-32 md:w-52' />
+              <h3 className="text-gray-800 pb-2 text-2xl md:text-4xl font-bold mt-8 dark:text-white">
                 24x7 Pharmacy Facility
               </h3>
             </div>

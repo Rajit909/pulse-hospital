@@ -17,36 +17,36 @@ const Services = () => {
           <div className=" flex justify-center " data-aos="zoom-in">
             {/* right */}
             <div className="pb-4">
-              <h1 className=" font-bold text-3xl text-blue-700 mb-1">
+              <h1 className=" font-bold text-4xl text-blue-700 mb-1">
                 Available Services
               </h1>
 
-              <h3 className=" font-semibold text-gray-700 md:pb-4">
+              <h3 className=" font-semibold text-xl text-gray-700 md:pb-4">
                 We have following Services
               </h3>
               <ul>
-                <li className=" text-indigo-500" style={{ lineHeight: "35px" }}>
+                <li className=" text-indigo-500 text-xl" style={{ lineHeight: "35px" }}>
                   Advanced Neonatal and Paediatric Intensive Care
                 </li>
-                <li className=" text-indigo-500" style={{ lineHeight: "35px" }}>
+                <li className=" text-indigo-500 text-xl" style={{ lineHeight: "35px" }}>
                   Advanced Medical and Surgical Intensive Care
                 </li>
-                <li className=" text-indigo-500" style={{ lineHeight: "35px" }}>
+                <li className=" text-indigo-500 text-xl" style={{ lineHeight: "35px" }}>
                   24x7 Diagnostic Facility
                 </li>
-                <li className=" text-indigo-500" style={{ lineHeight: "35px" }}>
+                <li className=" text-indigo-500 text-xl" style={{ lineHeight: "35px" }}>
                   24x7 Ambulance Facility
                 </li>
-                <li className=" text-indigo-500" style={{ lineHeight: "35px" }}>
+                <li className=" text-indigo-500 text-xl" style={{ lineHeight: "35px" }}>
                   24x7 Pharmacy Facility
                 </li>
-                <li className=" text-indigo-500" style={{ lineHeight: "35px" }}>
+                <li className=" text-indigo-500 text-xl" style={{ lineHeight: "35px" }}>
                   Patient-Centered Care
                 </li>
-                <li className=" text-indigo-500" style={{ lineHeight: "35px" }}>
+                <li className=" text-indigo-500 text-xl" style={{ lineHeight: "35px" }}>
                   Emergency Services
                 </li>
-                <li className=" text-indigo-500" style={{ lineHeight: "35px" }}>
+                <li className=" text-indigo-500 text-xl" style={{ lineHeight: "35px" }}>
                   Expert Doctors
                 </li>
               </ul>

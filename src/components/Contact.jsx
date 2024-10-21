@@ -9,7 +9,7 @@ const Contact = () => {
     <>
       <section className=" mx-auto max-w-full dark:bg-darkbg pb-4">
 
-      <div className=" max-w-3xl mx-auto text-center pb-10" data-aos-duration="3000" data-aos="fade-up">
+      <div className=" max-w-3xl mx-auto text-center pb-10" data-aos-duration="1000" data-aos="fade-up">
           <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-800 dark:text-white border-b-4 mx-40 md:mx-60 border-blue-500">Contact Us</h2>
           <p className="md:text-lg text-gray-700 mb-8 dark:text-white">
             We’d love to hear from you! Whether you have a question, feedback,
@@ -18,7 +18,7 @@ const Contact = () => {
           </p>
         </div>
         <div 
-          data-aos-duration="3000" data-aos="zoom-in"
+          data-aos-duration="1000" data-aos="zoom-in"
           id="map"
           className="relative h-[300px] overflow-hidden bg-cover bg-[50%] bg-no-repeat "
         >
@@ -31,7 +31,7 @@ const Contact = () => {
             loading="lazy"
           ></iframe>
         </div>
-        <div className="container mx-auto md:px-12 " data-aos-duration="3000" data-aos="fade-up">
+        <div className="container mx-auto md:px-12 " data-aos-duration="1000" data-aos="fade-up">
           <div className="block rounded-lg bg-[hsla(0,0%,100%,0.8)] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  md:py-16 md:px-12 -mt-[100px] backdrop-blur-[30px] border border-gray-300 dark:bg-slate-800">
             <div className="flex flex-wrap">
               <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6">

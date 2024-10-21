@@ -14,6 +14,10 @@ const AboutUs = () => {
   const openModal = () => {
     setIsModalOpen(true);
   } 
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  }
   return (
     <>
     <Navbar/>
@@ -92,7 +96,7 @@ const AboutUs = () => {
       <section className="py-12 bg-blue-400 text-white text-center dark:bg-slate-800">
         <h2 className="text-3xl font-bold mb-4">Ready to Take the Next Step?</h2>
         <p className="text-xl mb-6">Contact us today to schedule an appointment or learn more about our services.</p>
-        <button className="bg-white text-blue-600 dark:bg-slate-200 px-3 md:px-6 py-2 md:py-3 rounded font-bold hover:bg-slate-100">
+        <button className="bg-white text-blue-600 dark:bg-slate-200 px-3 md:px-6 py-2 md:py-3 rounded font-bold hover:bg-slate-100" onClick={openModal}> 
           Schedule an Appointment
         </button>
       </section>
@@ -102,12 +106,10 @@ const AboutUs = () => {
 
       {/* modal */}
 
-      {/* {
-        isModalOpen && (
-          
-          <AppointmentModal/>
-        )
-      } */}
+      {
+       isModalOpen && 
+        <AppointmentModal closeModal={closeModal}/>
+      }
 
       <Footer/>
     </>
