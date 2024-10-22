@@ -6,7 +6,7 @@ const doctors = [
   {
     id: 1,
     image: "/ammarahmed.jpg", // Replace with actual image URLs
-    name: "Dr. Ammar Ahmed Khan",
+    name: "Dr. Ammar Ahmad Khan",
     specialty: "Cunsultant Physician - Diabetes & Critical Care",
     bio: "MBBS, MD, Medicine"
   },
