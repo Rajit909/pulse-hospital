@@ -1,98 +1,87 @@
-import React from "react";
-import Slider from "react-slick";
+import React, { useState, useEffect } from "react";
 
 const Hero = () => {
-  const settings = {
-    dots: true, // Show dots at the bottom
-    infinite: true, // Infinite scrolling
-    speed: 500, // Transition speed
-    slidesToShow: 1, // Show one slide at a time
-    slidesToScroll: 1, // Scroll one slide at a time
-    autoplay: true, // Automatically play the slides
-    autoplaySpeed: 3000, // 3 seconds between slides
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const slides = [
+    {
+      image: "/group1.jpg",
+      title: "Compassionate Care for Your Health",
+      description: "We provide world-class medical care with a focus on excellence and compassion.",
+      buttonText: "Learn More",
+      buttonLink: "/about",
+    },
+    {
+      image: "/group2.jpg",
+      title: "Advanced Facilities for Better Health",
+      description: "State-of-the-art technology and facilities for all your medical needs.",
+      buttonText: "Our Services",
+    },
+    {
+      image: "/group3.jpg",
+      title: "Meet Our Expert Doctors",
+      description: "A dedicated team of professionals committed to your well-being.",
+      buttonText: "Meet the Team",
+    },
+  ];
+
+  const nextSlide = () => {
+    setCurrentSlide((prevIndex) => (prevIndex + 1) % slides.length);
   };
 
+  const prevSlide = () => {
+    setCurrentSlide((prevIndex) =>
+      prevIndex === 0 ? slides.length - 1 : prevIndex - 1
+    );
+  };
+
+  useEffect(() => {
+    const slideInterval = setInterval(nextSlide, 3000);
+    return () => clearInterval(slideInterval);
+  }, []);
+
   return (
-    <>
-    <section className="relative">
-      <Slider {...settings}>
-        <div
-          className="relative h-screen bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/group1.jpg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="absolute inset-0 flex items-center justify-center text-center text-white px-4">
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                Compassionate Care for Your Health
-              </h1>
-              <p className="text-lg md:text-xl mb-6">
-                We provide world-class medical care with a focus on excellence
-                and compassion.
-              </p>
-              <a href="/about">
-                <button className="bg-blue-600 dark:bg-darkbg px-6 py-3 text-white rounded-md hover:bg-blue-500 transition duration-300">
-                  Learn More
-                </button>
-              </a>
+    <section className="relative overflow-hidden">
+      <div className="relative h-screen">
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+              index === currentSlide ? "opacity-100" : "opacity-0"
+            }`}
+            style={{ backgroundImage: `url(${slide.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+          >
+            <div className="absolute inset-0 bg-black opacity-50"></div>
+            <div className="absolute inset-0 flex items-center justify-center text-center text-white px-4">
+              <div>
+                <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                  {slide.title}
+                </h1>
+                <p className="text-lg md:text-xl mb-6">{slide.description}</p>
+                {slide.buttonText && (
+                  <a href={slide.buttonLink}>
+                    <button className="bg-blue-600 dark:bg-darkbg px-6 py-3 text-white rounded-md hover:bg-blue-500 transition duration-300">
+                      {slide.buttonText}
+                    </button>
+                  </a>
+                )}
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          className="relative h-screen bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/group1.jpg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
+        ))}
+        <button
+          className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white px-3 py-2 rounded-full hover:bg-opacity-75"
+          onClick={prevSlide}
         >
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="absolute inset-0 flex items-center justify-center text-center text-white px-4">
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                Advanced Facilities for Better Health
-              </h1>
-              <p className="text-lg md:text-xl mb-6">
-                State-of-the-art technology and facilities for all your medical
-                needs.
-              </p>
-              <button className="bg-blue-600 dark:bg-darkbg px-6 py-3 text-white rounded-md hover:bg-blue-500 transition duration-300">
-                Our Services
-              </button>
-            </div>
-          </div>
-        </div>
-        <div
-          className="relative h-screen bg-cover bg-center"
-          style={{
-            backgroundImage: "url('group1.jpg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
+          &#10094;
+        </button>
+        <button
+          className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white px-3 py-2 rounded-full hover:bg-opacity-75"
+          onClick={nextSlide}
         >
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="absolute inset-0 flex items-center justify-center text-center text-white px-4">
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                Meet Our Expert Doctors
-              </h1>
-              <p className="text-lg md:text-xl mb-6">
-                A dedicated team of professionals committed to your well-being.
-              </p>
-              <button className="bg-blue-600 dark:bg-darkbg px-6 py-3 text-white rounded-md hover:bg-blue-500 transition duration-300">
-                Meet the Team
-              </button>
-            </div>
-          </div>
-        </div>
-      </Slider>
+          &#10095;
+        </button>
+      </div>
     </section>
-   
-    </>
   );
 };
 
