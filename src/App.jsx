@@ -10,6 +10,7 @@ import TestimonialsPage from "./pages/TestimonialsPage";
 import { FaArrowUp } from "react-icons/fa6";
 import NewsDetail from "./pages/NewsDetail";
 import EventsPage from "./pages/EventsPage";
+import UnderConstruction from "./components/shared/UnderConstruction";
 
 
 function App() {
@@ -51,6 +52,10 @@ function App() {
     {
       path: "/events",
       element: <EventsPage/>
+    },
+    {
+      path: "/under-construction",
+      element: <UnderConstruction/>
     }
     
   ])

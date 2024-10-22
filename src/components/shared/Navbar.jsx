@@ -93,7 +93,7 @@ const Navbar = () => {
                  {
                   location.pathname !== "/about" &&(
                     <Link
-                    to="/about"
+                    to="/under-construction"
                     className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold
                     "
                   >
@@ -103,7 +103,7 @@ const Navbar = () => {
                  {
                   location.pathname !== "/services" &&(
                      <Link
-                    to="/services"
+                    to="/under-construction"
                     className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold
                     "
                   >
@@ -113,7 +113,7 @@ const Navbar = () => {
                  {
                   location.pathname !== "/testimonials" &&(
                      <Link
-                    to="/testimonials"
+                    to="/under-construction"
                     className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold
                     "
                   >
@@ -123,7 +123,7 @@ const Navbar = () => {
                   {
                   location.pathname !== "/news" &&(
                      <Link
-                    to="/news"
+                    to="/under-construction"
                     className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold
                     "
                   >
@@ -133,7 +133,7 @@ const Navbar = () => {
                  {
                   location.pathname !== "/events" &&(
                       <Link
-                      to="/events"
+                      to="/under-construction"
                       className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold
                       "
                     >
@@ -200,7 +200,7 @@ const Navbar = () => {
                  {
                   location.pathname !== "/about" &&(
                     <Link
-                    to="/about"
+                    to="/under-construction"
                     className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold
                     "
                   >
@@ -210,7 +210,7 @@ const Navbar = () => {
                  {
                   location.pathname !== "/services" &&(
                      <Link
-                    to="/services"
+                    to="/under-construction"
                     className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold
                     "
                   >
@@ -220,7 +220,7 @@ const Navbar = () => {
                  {
                   location.pathname !== "/testimonials" &&(
                      <Link
-                    to="/testimonials"
+                    to="/under-construction"
                     className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold
                     "
                   >
@@ -230,7 +230,7 @@ const Navbar = () => {
                  {
                   location.pathname !== "/news" &&(
                      <Link
-                    to="/news"
+                    to="/under-construction"
                     className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold
                     "
                   >
@@ -240,7 +240,7 @@ const Navbar = () => {
                 {
                   location.pathname !== "/events" &&(
                       <Link
-                      to="/events"
+                      to="/under-construction"
                       className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold
                       "
                     >
