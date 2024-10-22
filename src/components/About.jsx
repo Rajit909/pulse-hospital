@@ -42,24 +42,24 @@ const About = () => {
 
         <div className="flex flex-col lg:flex-row py-16 items-center justify-center gap-20 " data-aos="fade-up">
           <div className=" flex flex-col  justify-between items-center  gap-4 p-8  px-16 transition-all duration-300 hover:scale-[103%]">
-            <LiaMicroscopeSolid size={150} className="text-blue-800" />
-            <div className=" text-3xl font-bold text-blue-600">15+</div>
-            <h1 className=" text-[24px] font-[Poppins, sans-serif] font-bold text-blue-600">
+            <LiaMicroscopeSolid size={150} className="text-blue-800 dark:text-blue-500" />
+            <div className=" text-3xl font-bold text-blue-600 dark:text-blue-500">15+</div>
+            <h1 className=" text-[24px] font-[Poppins, sans-serif] font-bold text-blue-600 dark:text-blue-500">
               Our Speciality
             </h1>
           </div>
           
           <div className=" flex flex-col  justify-center items-center  gap-4 p-8  px-16 transition-all duration-300 hover:scale-[103%]">
-            <FaUserDoctor size={150} className="text-blue-800" />
-            <div className=" text-3xl font-bold text-blue-600">20+</div>
-            <h1 className=" text-[24px] font-[Poppins, sans-serif] font-bold text-blue-600">
+            <FaUserDoctor size={150} className="text-blue-800 dark:text-blue-500" />
+            <div className=" text-3xl font-bold text-blue-600 dark:text-blue-500">20+</div>
+            <h1 className=" text-[24px] font-[Poppins, sans-serif] font-bold text-blue-600 dark:text-blue-500">
               Our Doctors
             </h1>
           </div>
           <div className=" flex flex-col  justify-center items-center  gap-4 p-8 px-16 transition-all duration-300 hover:scale-[103%]">
-          <IoIosHeartEmpty size={150} className="text-blue-800" />
-            <div className=" text-3xl font-bold text-blue-600">1000+</div>
-            <h1 className=" text-[24px] font-[Poppins, sans-serif] font-bold text-blue-600">
+          <IoIosHeartEmpty size={150} className="text-blue-800 dark:text-blue-500" />
+            <div className=" text-3xl font-bold text-blue-600 dark:text-blue-500">1000+</div>
+            <h1 className=" text-[24px] font-[Poppins, sans-serif] font-bold text-blue-600 dark:text-blue-500">
               Our Patient
             </h1>
           </div>

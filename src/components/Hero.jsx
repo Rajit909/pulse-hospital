@@ -22,6 +22,11 @@ const Hero = () => {
       description: "A dedicated team of professionals committed to your well-being.",
       buttonText: "Meet the Team",
     },
+    {
+      image: "/group.jpg",
+      title: "Your Health is Our Priority",
+      description: "We are committed to providing the best care for you and your family.",
+    }
   ];
 
   const nextSlide = () => {
