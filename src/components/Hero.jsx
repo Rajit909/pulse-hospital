@@ -55,7 +55,7 @@ const Hero = () => {
             }`}
             style={{ backgroundImage: `url(${slide.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
           >
-            <div className="absolute inset-0 bg-black opacity-50"></div>
+            <div className="absolute inset-0 bg-black opacity-30"></div>
             <div className="absolute inset-0 flex items-center justify-center text-center text-white px-4">
               <div>
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">
