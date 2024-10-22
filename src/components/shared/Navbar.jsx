@@ -76,7 +76,7 @@ const Navbar = () => {
                 </span>
               </Link>
             </div>
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
               <div className=" flex items-center gap-8">
                 <div className="flex space-x-4">
                   {
@@ -131,6 +131,17 @@ const Navbar = () => {
                   </Link>)
                  }
                  {
+                  location.pathname !== "/events" &&(
+                      <Link
+                      to="/events"
+                      className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold
+                      "
+                    >
+                      Events
+                    </Link>)
+
+                 }
+                 {
                   location.pathname !== "/contact" &&(
                     <Link
                     to="/contact"
@@ -150,7 +161,7 @@ const Navbar = () => {
               </div>
             </div>
 
-            <div className="md:hidden">
+            <div className="lg:hidden">
               <div className=" flex items-center">
                 <button
                   onClick={toggleTheme}
@@ -226,7 +237,17 @@ const Navbar = () => {
                     News & Updates
                   </Link>)
                  }
-               
+                {
+                  location.pathname !== "/events" &&(
+                      <Link
+                      to="/events"
+                      className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold
+                      "
+                    >
+                      Events
+                    </Link>)
+                    
+                 }
                  {
                   location.pathname !== "/contact" &&(
                     <Link

@@ -2,27 +2,33 @@ import React from "react";
 import Navbar from "../components/shared/Navbar";
 import Footer from "../components/shared/Footer";
 import NewsCard from "../components/NewsCard";
+import PagesTop from "../components/PagesTop";
 
 const News = () => {
 
     const news = [
         {
+            id: 1,
             title: "News Title",
             desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit "
         },
         {
+            id: 2,
             title: "News Title",
             desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit Lorem ipsum dolor, sit amet consectetur adipisicing elit"
         },
         {
+            id: 3,
             title: "News Title",
             desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit Lorem ipsum dolor, sit amet consectetur adipisicing elit."
         },
         {
+            id: 4,                
             title: "News Title",
             desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit Lorem ipsum dolor, sit amet consectetur adipisicing elit"
         },
         {
+            id: 6,
             title: "News Title",
             desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit Lorem ipsum dolor, sit amet consectetur adipisicing elit. "
         },
@@ -31,20 +37,10 @@ const News = () => {
   return (
     <>
       <Navbar />
-      <section
-        className="relative bg-cover bg-center h-[400px] "
-        style={{ backgroundImage: "url('/bgimg.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-blue-700 bg-opacity-50 flex items-center justify-center">
-          <div className="text-center text-white px-4">
-            <h1 className="text-5xl font-bold mb-4">Pulse Hospital</h1>
-            <p className="text-xl">News & Updates</p>
-          </div>
-        </div>
-      </section>
+     <PagesTop title={"Pulse Hospital News"} />
 
       <div className="dark:bg-darkbg bg-gray-100 dark:text-white py-4">
-        <div className="md:max-w-4xl max-w-xl rounded-md mx-auto flex flex-col justify-center items-center dark:bg-slate-500 bg-white shadow my-8 pb-4">
+        <div className="md:max-w-4xl max-w-xl rounded-md mx-auto flex flex-col justify-center items-center dark:bg-slate-500 bg-white shadow my-8 pb-4 md:px-2">
           <div className=" mx-4">
             <h1 className="text-2xl font-bold text-blue-800 pt-8">
               News & Updates
@@ -56,10 +52,10 @@ const News = () => {
           </div>
         
             {
-                news.map((item, idx) => {
+                news.map((item) => {
                     return (
-                        <div key={idx}>
-                        <NewsCard title={item.title} desc={item.desc}/>
+                        <div key={item.id}>
+                        <NewsCard title={item.title} desc={item.desc} newsId={item.id}/>
                         </div>
                     )
                 })

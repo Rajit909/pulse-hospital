@@ -12,6 +12,7 @@ import Footer from './shared/Footer'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Faq from './Faq'
+import Events from './Events'
 
 const Home = () => {
  
@@ -19,6 +20,8 @@ const Home = () => {
   useEffect(() => {
     AOS.init({ duration: 1200 }); // You can set options like duration here
   }, []);
+
+  
 
   return (
     <>
@@ -37,6 +40,10 @@ const Home = () => {
         {/*Appointment booking  section */}
         <Appointment/>
         {/* Contact section */}
+        {/* events */}
+
+        <Events/>
+        {/* contact */}
         <Contact/>
         {/* FaQ */}
         <Faq/>

@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/shared/Navbar";
 import Footer from "../components/shared/Footer";
 import PlayButton from "../components/PlayBtn";
+import PagesTop from "../components/PagesTop";
 
 const TestimonialsPage = () => {
   const testimonials = [
@@ -54,17 +55,7 @@ const TestimonialsPage = () => {
   return (
     <>
       <Navbar />
-      <section
-        className="relative bg-cover bg-center h-[400px]"
-        style={{ backgroundImage: "url('/bgimg.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-blue-700 bg-opacity-50 flex items-center justify-center">
-          <div className="text-center text-white px-4">
-            <h1 className="text-5xl font-bold mb-4"> Pulse Hospital</h1>
-            <p className="text-xl">Patient testimonials</p>
-          </div>
-        </div>
-      </section>
+      <PagesTop title={"Pulse Hospital"} desc={"Patient Testimonials"} />
       <section className="  dark:bg-darkbg dark:text-white">
         <div className="mx-auto max-w-6xl  dark:bg-darkbg dark:text-white">
             <h1 className=" py-10 text-center text-2xl dark:text-gray-100 font-bold">Our Patient Testimonials</h1>

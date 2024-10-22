@@ -22,7 +22,7 @@ const AboutUs = () => {
     <>
     <Navbar/>
       {/* Hero Section */}
-      <PagesTop desc={"Dedicated to Compassionate Care and Medical Excellence for Over 25 Years"}/>
+      <PagesTop title={"Pulse Hospital"} desc={"Dedicated to Compassionate Care and Medical Excellence for Over 25 Years"}/>
 
       {/* Mission, Vision, Values */}
       <section className="py-12 bg-gray-100 dark:bg-darkbg dark:text-white">

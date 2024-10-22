@@ -8,6 +8,8 @@ import ServicesPage from "./pages/ServicesPage";
 import News from "./pages/News";
 import TestimonialsPage from "./pages/TestimonialsPage";
 import { FaArrowUp } from "react-icons/fa6";
+import NewsDetail from "./pages/NewsDetail";
+import EventsPage from "./pages/EventsPage";
 
 
 function App() {
@@ -41,6 +43,14 @@ function App() {
     {
       path: "/testimonials",
       element: <TestimonialsPage/>
+    },
+    {
+      path: "/news/:id",
+      element: <NewsDetail/>
+    },
+    {
+      path: "/events",
+      element: <EventsPage/>
     }
     
   ])
@@ -51,7 +61,7 @@ function App() {
 
         <div className="fixed bottom-0 right-5 p-4 ">
             <a
-              className="bg-blue-800 dark:bg-gray-700 text-white dark:text-blue-200 rounded-full w-10 h-10 flex items-center justify-center"
+              className="bg-blue-800 text-white dark:text-blue-200 rounded-full w-10 h-10 flex items-center justify-center"
               href="#"
             >
            <FaArrowUp />

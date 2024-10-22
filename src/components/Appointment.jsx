@@ -7,9 +7,15 @@ const Appointment = () => {
     phone: "",
     doctor: "",
     date: "",
-    time: "",
+    slot: "",
     message: "",
   });
+
+  const slots = [
+    "09:00 AM - 10:00 AM",
+    "10:00 AM - 11:00 AM",
+    "11:00 AM - 12:00 PM",
+  ]
 
   const doctors = [
     "Doctor 1",
@@ -129,16 +135,20 @@ const Appointment = () => {
 
             {/* Appointment Time */}
             <div>
-              <label className="block text-gray-700 dark:text-white font-semibold mb-2" htmlFor="time">Preferred Time*</label>
-              <input
-                type="time"
-                name="time"
-                id="time"
-                value={formData.time}
+              <label className="block text-gray-700 dark:text-white font-semibold mb-2" htmlFor="doctor">Select Slot*</label>
+              <select
+                name="slot"
+                id="slot"
+                value={formData.slot}
                 onChange={handleChange}
                 className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
                 required
-              />
+              >
+                <option value="">Select a Slot</option>
+                {slots.map((slot, index) => (
+                  <option key={index} value={slot}>{slot}</option>
+                ))}
+              </select>
             </div>
 
             {/* Message (Optional) */}

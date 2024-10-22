@@ -62,7 +62,7 @@ const AppointmentModal = ({closeModal}) => {
               </button>
             </div>
 
-            <section className="py-4 dark:bg-darkbg">
+            <section className="py-4">
       <div className="max-w-2xl mx-auto px-2" >
        
         <form onSubmit={handleSubmit} className="bg-white dark:bg-slate-800 p-4 rounded-lg shadow-md ">

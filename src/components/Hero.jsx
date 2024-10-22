@@ -16,7 +16,7 @@ const Hero = () => {
     return (
         <section className="relative">
             <Slider {...settings}>
-                <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: "url('https://via.placeholder.com/1500x800')" }}>
+                <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: "url('/group3.jpg')" }}>
                     <div className="absolute inset-0 bg-black opacity-50"></div>
                     <div className="absolute inset-0 flex items-center justify-center text-center text-white px-4">
                         <div>
@@ -29,7 +29,7 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
-                <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: "url('https://via.placeholder.com/1500x800')" }}>
+                <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: "url('/group3.jpg')" }}>
                     <div className="absolute inset-0 bg-black opacity-50"></div>
                     <div className="absolute inset-0 flex items-center justify-center text-center text-white px-4">
                         <div>
@@ -41,7 +41,7 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
-                <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: "url('https://via.placeholder.com/1500x800')" }}>
+                <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: "url('group1.jpg')" }}>
                     <div className="absolute inset-0 bg-black opacity-50"></div>
                     <div className="absolute inset-0 flex items-center justify-center text-center text-white px-4">
                         <div>
