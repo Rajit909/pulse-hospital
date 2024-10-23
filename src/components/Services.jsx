@@ -83,7 +83,9 @@ const Services = () => {
               </h3>
             </div>
 
-            <div data-aos="fade-up" className=" flex items-center justify-center">
+            
+          </div>
+          <div data-aos="fade-up" className=" flex items-center justify-center pt-4">
               <button className=" py-1 ">
                 <Link
                   to={"/services"}
@@ -93,7 +95,6 @@ const Services = () => {
                 </Link>
               </button>
             </div>
-          </div>
         </div>
       </section>
     </>
