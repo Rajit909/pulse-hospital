@@ -10,17 +10,17 @@ const About = () => {
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8 mx-auto items-center py-16">
           {/* Text Content */}
-          <div className=" mx-auto" data-aos="fade-right">
-            <h2 className="text-3xl font-bold mb-4 text-blue-600">
+          <div className=" mx-3 md:mx-auto " data-aos="fade-right">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-blue-600">
               About Pulse Hospital
             </h2>
-            <p className="text-lg mb-6 max-w-xl text-wrap text-gray-700 dark:text-white text-justify">
+            <p className="text-md md:text-lg mb-6 max-w-xl text-wrap text-gray-700 dark:text-white text-justify">
               At Pulse Hospital, we are dedicated to providing high-quality,
               compassionate healthcare to our community. With state-of-the-art
               facilities and a team of experienced professionals, we offer a
               range of medical services to meet your health needs.
             </p>
-            <p className="text-lg mb-6 max-w-xl text-wrap text-gray-700 dark:text-white text-justify">
+            <p className="text-md md:text-lg mb-6 max-w-xl text-wrap text-gray-700 dark:text-white text-justify">
               We believe in a holistic approach to healthcare, addressing not
               only physical ailments but also emotional and mental well-being.
             </p>
