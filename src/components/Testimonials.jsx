@@ -18,7 +18,7 @@ const Testimonials = () => {
         <h2 className="text-2xl  md:text-3xl font-bold text-center mb-8 text-blue-500">
           What Our Patients Say?
         </h2>
-        <div className=" mx-10 md:mx-30">
+        <div className=" mx-5 md:mx-30">
           <Slider {...settings}>
             <div className="relative ">
               <div className="max-w-6xl mx-auto p-10 text-wrap bg-white dark:bg-slate-800 rounded-lg">
