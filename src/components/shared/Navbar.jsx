@@ -40,7 +40,7 @@ const Navbar = () => {
         <div className="md:max-w-6xl mx-auto px-4 py-2 flex justify-between items-center">
           <div className="flex space-x-4">
             <span className="flex items-center gap-1">
-              <MdAddCall /> +1 (555) 123-4567
+              <MdAddCall /> +91-9681275415
             </span>
             <span className="flex items-center gap-1">
               <MdOutlineEmail /> info@pulsehospital.com
