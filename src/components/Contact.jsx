@@ -7,10 +7,10 @@ import { MdOutlineEmail } from "react-icons/md";
 const Contact = () => {
   return (
     <>
-      <section className=" mx-auto max-w-full dark:bg-darkbg pb-4">
+      <section className="px-2 md:px-auto mx-auto max-w-full dark:bg-darkbg pb-4">
 
       <div className=" max-w-3xl mx-auto text-center pb-10" data-aos-duration="1000" data-aos="fade-up">
-          <h2 className="text-xl md:text-3xl font-bold mb-6 text-gray-800 dark:text-white border-b-4 mx-40 md:mx-60 border-blue-500">Contact Us</h2>
+          <h2 className="text-xl md:text-3xl font-bold mb-6 text-gray-800 dark:text-white border-b-4 mx-28 md:mx-60 border-blue-500">Contact Us</h2>
           <p className="md:text-lg text-gray-700 mb-8 dark:text-white">
             We’d love to hear from you! Whether you have a question, feedback,
             or need assistance, feel free to reach out to us. Our team is here
