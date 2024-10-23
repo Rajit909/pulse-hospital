@@ -9,12 +9,12 @@ const Services = () => {
         className="bg-cover bg-center bg-fixed py-20"
         style={{ backgroundImage: "url('/bgimg1.jpg" }}
       >
-        <div className="h-96 flex flex-col md:flex-row container mx-auto gap-8 md:gap-0 ">
+        <div className="md:h-96 flex flex-col md:flex-row container mx-auto gap-20 md:gap-0 ">
           <div className=" flex justify-center items-center md:w-1/2" data-aos="zoom-in">
             {/* left */}
             <PlayButton />
           </div>
-          <div className=" flex justify-center " data-aos="zoom-in">
+          <div className=" flex justify-center mx-10" data-aos="zoom-in">
             {/* right */}
             <div className="pb-4">
               <h1 className=" font-bold text-4xl text-blue-700 mb-1">

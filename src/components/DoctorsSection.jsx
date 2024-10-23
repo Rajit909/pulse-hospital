@@ -5,14 +5,14 @@ import DoctorCard from "./DoctorCard";
 const doctors = [
   {
     id: 1,
-    image: "/ammarahmed.jpg", // Replace with actual image URLs
+    image: "/doctor4.jpg", // Replace with actual image URLs
     name: "Dr. Ammar Ahmad Khan",
     specialty: "Cunsultant Physician - Diabetes & Critical Care",
     bio: "MBBS, MD, Medicine"
   },
   {
     id: 2,
-    image: "/doctor3.jpg",
+    image: "/doctor2.jpg",
     name: "Dr. Bushra Noor",
     specialty: "Cunsultant Pediatrician ",
     bio: "M.D - Pediatrics "
