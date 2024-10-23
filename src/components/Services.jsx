@@ -17,7 +17,7 @@ const Services = () => {
           <div className=" flex justify-center mx-10" data-aos="zoom-in">
             {/* right */}
             <div className="pb-4">
-              <h1 className=" font-bold text-4xl text-blue-700 mb-1">
+              <h1 className=" font-bold text-3xl md:text-4xl text-blue-700 mb-1">
                 Available Services
               </h1>
 
