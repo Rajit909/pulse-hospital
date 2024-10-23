@@ -26,7 +26,7 @@ const Testimonials = () => {
                   <div className="mb-4 rounded-[50%] w-24 h-24 bg-gray-300">
                     <img src="/man.png" alt="img" className="rounded-[50%] w-24 h-24" />
                   </div>
-                  <h2 className=" text-xl font-bold text-center text-gray-600 dark:text-white">
+                  <h2 className=" text-xl font-bold text-center text-gray-600 dark:text-white mb-2">
                     Patient name
                   </h2>
                   <p className=" text-lg font-light italic text-gray-700 text-center dark:text-white ">
@@ -43,7 +43,7 @@ const Testimonials = () => {
                 <div className="mb-4 rounded-[50%] w-24 h-24 bg-gray-300">
                     <img src="/man.png" alt="img" className="rounded-[50%] w-24 h-24" />
                   </div>
-                  <h2 className=" text-xl font-bold text-center text-gray-600 dark:text-white">
+                  <h2 className=" text-xl font-bold text-center text-gray-600 dark:text-white mb-2">
                     Patient name
                   </h2>
                   <p className=" text-lg font-light italic text-gray-700 text-center dark:text-white">
@@ -60,7 +60,7 @@ const Testimonials = () => {
                 <div className="mb-4 rounded-[50%] w-24 h-24 bg-gray-300">
                     <img src="/man.png" alt="img" className="rounded-[50%] w-24 h-24" />
                   </div>
-                  <h2 className=" text-xl font-bold text-center text-gray-600 dark:text-white">
+                  <h2 className=" text-xl font-bold text-center text-gray-600 dark:text-white mb-2">
                     Patient name
                   </h2>
                   <p className=" text-lg font-light italic text-gray-700 text-center dark:text-white">
