@@ -24,7 +24,24 @@ const Testimonials = () => {
               <div className="max-w-6xl mx-auto p-10 text-wrap bg-white dark:bg-slate-800 rounded-lg">
                 <div className=" flex flex-col items-center justify-center">
                   <div className="mb-4 rounded-[50%] w-24 h-24 bg-gray-300">
-                    <img src="/abc.jpg" alt="img" className="rounded-[50%] w-24 h-24" />
+                    <img src="/man.png" alt="img" className="rounded-[50%] w-24 h-24" />
+                  </div>
+                  <h2 className=" text-xl font-bold text-center text-gray-600 dark:text-white">
+                    Patient name
+                  </h2>
+                  <p className=" text-lg font-light italic text-gray-700 text-center dark:text-white ">
+                    " I was very impressed with the professionalism of the staff
+                    and the quality of care I received. I would highly recommend
+                    this hospital to anyone."
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="relative ">
+              <div className="max-w-6xl mx-auto text-wrap p-10 bg-white dark:bg-slate-800 rounded-lg">
+                <div className="flex flex-col items-center justify-center">
+                <div className="mb-4 rounded-[50%] w-24 h-24 bg-gray-300">
+                    <img src="/man.png" alt="img" className="rounded-[50%] w-24 h-24" />
                   </div>
                   <h2 className=" text-xl font-bold text-center text-gray-600 dark:text-white">
                     Patient name
@@ -41,24 +58,7 @@ const Testimonials = () => {
               <div className="max-w-6xl mx-auto text-wrap p-10 bg-white dark:bg-slate-800 rounded-lg">
                 <div className="flex flex-col items-center justify-center">
                 <div className="mb-4 rounded-[50%] w-24 h-24 bg-gray-300">
-                    <img src="/abc.jpg" alt="img" className="rounded-[50%] w-24 h-24" />
-                  </div>
-                  <h2 className=" text-xl font-bold text-center text-gray-600 dark:text-white">
-                    Patient name
-                  </h2>
-                  <p className=" text-lg font-light italic text-gray-700 text-center dark:text-white">
-                    "I was very impressed with the professionalism of the staff
-                    and the quality of care I received. I would highly recommend
-                    this hospital to anyone."
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="relative ">
-              <div className="max-w-6xl mx-auto text-wrap p-10 bg-white dark:bg-slate-800 rounded-lg">
-                <div className="flex flex-col items-center justify-center">
-                <div className="mb-4 rounded-[50%] w-24 h-24 bg-gray-300">
-                    <img src="/abc.jpg" alt="img" className="rounded-[50%] w-24 h-24" />
+                    <img src="/man.png" alt="img" className="rounded-[50%] w-24 h-24" />
                   </div>
                   <h2 className=" text-xl font-bold text-center text-gray-600 dark:text-white">
                     Patient name

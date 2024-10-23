@@ -21,32 +21,32 @@ const Services = () => {
                 Available Services
               </h1>
 
-              <h3 className=" font-semibold text-xl text-gray-700 md:pb-4">
+              <h3 className=" font-semibold text-xl text-indigo-500 md:pb-4">
                 We have following Services
               </h3>
-              <ul>
-                <li className=" text-indigo-500 text-xl" style={{ lineHeight: "35px" }}>
+              <ul className=" list-disc">
+                <li className=" text-slate-600 text-lg " style={{ lineHeight: "35px" }}>
                   Advanced Neonatal and Paediatric Intensive Care
                 </li>
-                <li className=" text-indigo-500 text-xl" style={{ lineHeight: "35px" }}>
+                <li className=" text-slate-600 text-lg" style={{ lineHeight: "35px" }}>
                   Advanced Medical and Surgical Intensive Care
                 </li>
-                <li className=" text-indigo-500 text-xl" style={{ lineHeight: "35px" }}>
+                <li className=" text-slate-600 text-lg" style={{ lineHeight: "35px" }}>
                   24x7 Diagnostic Facility
                 </li>
-                <li className=" text-indigo-500 text-xl" style={{ lineHeight: "35px" }}>
+                <li className=" text-slate-600 text-lg" style={{ lineHeight: "35px" }}>
                   24x7 Ambulance Facility
                 </li>
-                <li className=" text-indigo-500 text-xl" style={{ lineHeight: "35px" }}>
+                <li className=" text-slate-600 text-lg" style={{ lineHeight: "35px" }}>
                   24x7 Pharmacy Facility
                 </li>
-                <li className=" text-indigo-500 text-xl" style={{ lineHeight: "35px" }}>
+                <li className=" text-slate-600 text-xl" style={{ lineHeight: "35px" }}>
                   Patient-Centered Care
                 </li>
-                <li className=" text-indigo-500 text-xl" style={{ lineHeight: "35px" }}>
+                <li className=" text-slate-600 text-lg" style={{ lineHeight: "35px" }}>
                   Emergency Services
                 </li>
-                <li className=" text-indigo-500 text-xl" style={{ lineHeight: "35px" }}>
+                <li className=" text-slate-600 text-lg" style={{ lineHeight: "35px" }}>
                   Expert Doctors
                 </li>
               </ul>
