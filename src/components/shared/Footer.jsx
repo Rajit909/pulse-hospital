@@ -51,7 +51,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      to={"/about"}
+                      to={"/"}
                       className=" dark:text-white text-gray-800 font-semibold"
                     >
                       About
@@ -59,7 +59,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      to={"/services"}
+                      to={"/"}
                       className=" dark:text-white text-gray-800 font-semibold"
                     >
                       Services
@@ -83,22 +83,22 @@ const Footer = () => {
                 </div>
                 <ul className="leading-8 list-disc">
                   <li className=" dark:text-white text-gray-800 font-semibold">
-                    <a href="/services">Expert Doctors</a>
+                    <a href="#">Expert Doctors</a>
                   </li>
                   <li className=" dark:text-white text-gray-800 font-semibold">
-                    <a href="/services">24x7 Diagnostic Facility</a>
+                    <a href="#">24x7 Diagnostic Facility</a>
                   </li>
                   <li className=" dark:text-white text-gray-800 font-semibold">
-                    <a href="/services">Emergency Services</a>
+                    <a href="#">Emergency Services</a>
                   </li>
                   <li className=" dark:text-white text-gray-800 font-semibold">
-                    <a href="/services">Patient-Centered Care</a>
+                    <a href="#">Patient-Centered Care</a>
                   </li>
                   <li className=" dark:text-white text-gray-800 font-semibold">
-                    <a href="/services">24x7 Ambulance Facility</a>
+                    <a href="#">24x7 Ambulance Facility</a>
                   </li>
                   <li className=" dark:text-white text-gray-800 font-semibold">
-                    <a href="/services">24x7 Pharmacy Facility</a>
+                    <a href="#">24x7 Pharmacy Facility</a>
                   </li>
                 </ul>
               </div>
