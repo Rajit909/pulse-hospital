@@ -24,7 +24,7 @@ const About = () => {
               We believe in a holistic approach to healthcare, addressing not
               only physical ailments but also emotional and mental well-being.
             </p>
-            <Link to="/about">
+            <Link to="/under-construction">
               <button className="bg-blue-600 text-white px-4 md:px-6 py-2 md:py-3 rounded-md hover:bg-blue-500 transition duration-300">
                 Learn More About Us
               </button>

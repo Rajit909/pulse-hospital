@@ -6,7 +6,7 @@ import {API_END_POINT} from '../api/Global.js'
 const doctors = [
   {
     id: 1,
-    image: "/doctor4.jpg", // Replace with actual image URLs
+    image: "/ammarahmed.jpg", // Replace with actual image URLs
     name: "Dr. Ammar Ahmad Khan",
     specialty: "Cunsultant Physician - Diabetes & Critical Care",
     bio: "MBBS, MD, Medicine"
@@ -36,7 +36,7 @@ const DoctorsSection = () => {
     <section className="py-12 bg-gray-100 dark:bg-darkbg">
       <div className="max-w-5xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8 text-blue-800">Meet Our Doctors</h2>
-        <div className="grid gap-8 md:grid-cols-2 " data-aos="fade-up"
+        <div className="grid gap-8 md:gap-12 md:grid-cols-2 " data-aos="fade-up"
       data-aos-duration="2000">
          {
           <>

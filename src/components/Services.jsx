@@ -88,7 +88,7 @@ const Services = () => {
           <div data-aos="fade-up" className=" flex items-center justify-center pt-4">
               <button className=" py-1 ">
                 <Link
-                  to={"/services"}
+                  to={"/under-construction"}
                   className=" font-semibold bg-blue-700 text-white rounded px-3 py-[5px]"
                 >
                   More Services
