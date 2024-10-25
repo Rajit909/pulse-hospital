@@ -123,7 +123,7 @@ const Navbar = () => {
                   {
                   location.pathname !== "/news" &&(
                      <Link
-                    to="/news"
+                    to="/under-construction"
                     className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold
                     "
                   >
