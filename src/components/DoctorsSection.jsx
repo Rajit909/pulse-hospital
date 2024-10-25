@@ -45,7 +45,7 @@ const DoctorsSection = () => {
               <DoctorCard
                 key={idx}
                 id={item.id}
-                image={item.imageurl}
+                image={item.image}
                 name={item.name}
                 specialty={item.specialty}
                 bio={item.bio}
