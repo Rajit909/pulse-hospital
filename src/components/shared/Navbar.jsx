@@ -152,7 +152,7 @@ const Navbar = () => {
                   </Link>)
                  }
 
-                 <Link to={"/admin"} className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold">Admin</Link>
+                 {/* <Link to={"/admin"} className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold">Admin</Link> */}
                  
 
                 </div>
