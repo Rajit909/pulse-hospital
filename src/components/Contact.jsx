@@ -23,7 +23,7 @@ const Contact = () => {
           className="relative h-[300px] overflow-hidden bg-cover bg-[50%] bg-no-repeat "
         >
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3511.34470735432!2d79.42909367549049!3d28.34842627582109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDIwJzU0LjMiTiA3OcKwMjUnNTQuMCJF!5e0!3m2!1sen!2sin!4v1729831871042!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d877.8358158482512!2d79.43109192120656!3d28.34846994596123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a001003921f881%3A0x7146fc25ba4f7a00!2sDr.Ammar&#39;s%20Pulse%20Hospital!5e0!3m2!1sen!2sin!4v1729832117974!5m2!1sen!2sin"
             width="100%"
             height="480"
             style={{ border: "0" }}
