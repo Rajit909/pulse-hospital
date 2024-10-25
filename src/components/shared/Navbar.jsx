@@ -123,7 +123,7 @@ const Navbar = () => {
                   {
                   location.pathname !== "/news" &&(
                      <Link
-                    to="/under-construction"
+                    to="/news"
                     className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold
                     "
                   >
@@ -151,6 +151,10 @@ const Navbar = () => {
                     Contact
                   </Link>)
                  }
+
+                 <Link to={"/admin"} className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold">Admin</Link>
+                 
+
                 </div>
                 <button
                   onClick={toggleTheme}

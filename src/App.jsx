@@ -11,6 +11,10 @@ import { FaArrowUp } from "react-icons/fa6";
 import NewsDetail from "./pages/NewsDetail";
 import EventsPage from "./pages/EventsPage";
 import UnderConstruction from "./components/shared/UnderConstruction";
+import Signin from "./pages/Signin";
+import Signup from "./pages/Signup";
+import AdminDashboard from "./pages/AdminDashboard";
+import Admin from "./components/Admin";
 
 
 function App() {
@@ -56,6 +60,22 @@ function App() {
     {
       path: "/under-construction",
       element: <UnderConstruction/>
+    },
+    {
+      path: "/admin/signin",
+      element: <Signin/>
+    },
+    {
+      path: "/admin/signup",
+      element: <Signup/>
+    },
+    {
+      path: "/admindashboard",
+      element: <AdminDashboard/>
+    },
+    {
+      path: "/admin",
+      element: <Admin/>
     }
     
   ])

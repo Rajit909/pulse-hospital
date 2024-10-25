@@ -1,38 +1,51 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/shared/Navbar";
 import Footer from "../components/shared/Footer";
 import NewsCard from "../components/NewsCard";
 import PagesTop from "../components/PagesTop";
+import { API_END_POINT_NEWS } from "../api/Global";
 
 const News = () => {
 
-    const news = [
-        {
-            id: 1,
-            title: "News Title",
-            desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit "
-        },
-        {
-            id: 2,
-            title: "News Title",
-            desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit Lorem ipsum dolor, sit amet consectetur adipisicing elit"
-        },
-        {
-            id: 3,
-            title: "News Title",
-            desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit Lorem ipsum dolor, sit amet consectetur adipisicing elit."
-        },
-        {
-            id: 4,                
-            title: "News Title",
-            desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit Lorem ipsum dolor, sit amet consectetur adipisicing elit"
-        },
-        {
-            id: 6,
-            title: "News Title",
-            desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit Lorem ipsum dolor, sit amet consectetur adipisicing elit. "
-        },
-    ]
+  const [data, setData] = useState("");
+
+  console.log(data)
+
+  useEffect(() => {
+  fetch(`${API_END_POINT_NEWS}`)
+  .then((response) => response.json())
+  .then((data) => setData(data))
+  .catch((error) => console.log("Error fetching data", error));
+  }
+  , []);
+
+    // const news = [
+    //     {
+    //         id: 1,
+    //         title: "News Title",
+    //         desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit "
+    //     },
+    //     {
+    //         id: 2,
+    //         title: "News Title",
+    //         desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit Lorem ipsum dolor, sit amet consectetur adipisicing elit"
+    //     },
+    //     {
+    //         id: 3,
+    //         title: "News Title",
+    //         desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+    //     },
+    //     {
+    //         id: 4,                
+    //         title: "News Title",
+    //         desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit Lorem ipsum dolor, sit amet consectetur adipisicing elit"
+    //     },
+    //     {
+    //         id: 6,
+    //         title: "News Title",
+    //         desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit Lorem ipsum dolor, sit amet consectetur adipisicing elit. "
+    //     },
+    // ]
 
   return (
     <>
@@ -52,15 +65,21 @@ const News = () => {
           </div>
         
             {
-                news.map((item) => {
-                    return (
-                        <div key={item.id}>
-                        <NewsCard title={item.title} desc={item.desc} newsId={item.id}/>
-                        </div>
-                    )
+             <>
+              {
+                data && data.map((item, idx)=>{
+                  return (
+                    <NewsCard
+                      key={idx}
+                      newsId={item.id}
+                      title={item.title}
+                      desc={item.descr}
+                    />
+                  )
                 })
+              }
+             </>
             }
-        
         </div>
       </div>
 
