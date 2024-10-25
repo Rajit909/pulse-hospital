@@ -40,7 +40,7 @@ const DoctorsSection = () => {
       data-aos-duration="2000">
          {
           <>
-          {data && data.map((item, idx)=>{
+          {doctors.map((item, idx)=>{
             return (
               <DoctorCard
                 key={idx}
