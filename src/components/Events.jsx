@@ -51,7 +51,7 @@ const Events = () => {
           ))}
         </div>
         <div className=" flex items-center justify-center py-5">
-        <Link to={"/events"}>
+        <Link to={"/under-construction"}>
               <button className="bg-blue-800 text-white hover:bg-blue-600 transition duration-500 px-4 py-2 rounded-full">
                 View All Events
               </button>
