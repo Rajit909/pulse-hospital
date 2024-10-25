@@ -43,7 +43,7 @@ const Navbar = () => {
               <MdAddCall /> +91-9681275415
             </span>
             <span className="flex items-center gap-1">
-              <MdOutlineEmail /> info@pulsehospital.com
+              <MdOutlineEmail /> khanammar151@gmail.com
             </span>
           </div>
           <div>
