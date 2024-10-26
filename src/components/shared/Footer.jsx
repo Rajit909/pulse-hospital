@@ -113,7 +113,7 @@ const Footer = () => {
                  <ul>
                   <li className=" mb-4 font-semibold dark:font-thin"><span className=" font-bold">Address:</span> 14 Civil Lines, Khurram Gautia Road near brBiyavani Kothi, Bareilly, India, Uttar Pradesh</li>
                   <li className=" mb-4 font-semibold dark:font-thin"><span className=" font-bold">Phone:</span> +91-96812 75415</li>
-                  <li className=" mb-4 font-semibold dark:font-thin"><span className=" font-bold">E-mail:</span> example@gmail.com</li>
+                  <li className=" mb-4 font-semibold dark:font-thin"><span className=" font-bold">E-mail:</span> khanammar151@gmail.com</li>
                  </ul>
                 </div>
 

@@ -30,7 +30,7 @@ const Testimonials = () => {
                     Patient name
                   </h2>
                   <p className=" text-lg font-light italic text-gray-700 text-center dark:text-white ">
-                  💬 " I was very impressed with the professionalism of the staff
+                   " I was very impressed with the professionalism of the staff
                     and the quality of care I received. I would highly recommend
                     this hospital to anyone."
                   </p>
@@ -47,7 +47,7 @@ const Testimonials = () => {
                     Patient name
                   </h2>
                   <p className=" text-lg font-light italic text-gray-700 text-center dark:text-white">
-                  💬 "I was very impressed with the professionalism of the staff
+                   "I was very impressed with the professionalism of the staff
                     and the quality of care I received. I would highly recommend
                     this hospital to anyone."
                   </p>
@@ -64,7 +64,7 @@ const Testimonials = () => {
                     Patient name
                   </h2>
                   <p className=" text-lg font-light italic text-gray-700 text-center dark:text-white">
-                  💬 "I was very impressed with the professionalism of the staff
+                   "I was very impressed with the professionalism of the staff
                     and the quality of care I received. I would highly recommend
                     this hospital to anyone."
                   </p>

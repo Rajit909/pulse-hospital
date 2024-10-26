@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/shared/Navbar";
 import Footer from "../components/shared/Footer";
 import NewsCard from "../components/NewsCard";
 import PagesTop from "../components/PagesTop";
+import { API_END_POINT_NEWS } from "../api/Global";
 
 const News = () => {
+
+  // const [data, setData] = useState("");
+
+  // console.log(data)
+
+  // useEffect(() => {
+  // fetch(`${API_END_POINT_NEWS}`)
+  // .then((response) => response.json())
+  // .then((data) => setData(data))
+  // .catch((error) => console.log("Error fetching data", error));
+  // }
+  // , []);
 
     const news = [
         {
@@ -52,15 +65,13 @@ const News = () => {
           </div>
         
             {
-                news.map((item) => {
-                    return (
-                        <div key={item.id}>
-                        <NewsCard title={item.title} desc={item.desc} newsId={item.id}/>
-                        </div>
-                    )
-                })
-            }
-        
+                 news.map((item) => {
+                  return (
+                      <div key={item.id}>
+                      <NewsCard title={item.title} desc={item.desc} newsId={item.id}/>
+                      </div>
+                  )
+            })}
         </div>
       </div>
 

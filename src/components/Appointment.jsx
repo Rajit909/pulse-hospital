@@ -1,13 +1,15 @@
 import React, { useState } from "react";
+import { API_END_POINT_APPOINTMENT } from "../api/Global";
+import { toast } from "react-toastify";
 
 const Appointment = () => {
   const [formData, setFormData] = useState({
-    name: "",
+    patient_name: "",
     email: "",
     phone: "",
     doctor: "",
-    date: "",
-    slot: "",
+    appointmentdate: "",
+    appointmentslot: "",
     message: "",
   });
 
@@ -29,25 +31,45 @@ const Appointment = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  console.log(formData);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Form validation (basic example)
-    if (!formData.name || !formData.email || !formData.phone || !formData.doctor || !formData.date || !formData.time) {
+    if (!formData.patient_name || !formData.email || !formData.phone || !formData.doctor || !formData.appointmentdate || !formData.appointmentslot || !formData.message) {
       alert("Please fill in all required fields.");
       return;
     }
-    // Handle form submission (e.g., send to an API)
-    console.log("Appointment Request:", formData);
-    alert("Appointment request sent successfully!");
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      doctor: "",
-      date: "",
-      time: "",
-      message: "",
-    });
+
+    try {
+      const response = await fetch(API_END_POINT_APPOINTMENT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast.success("Appointment request submitted successfully!");
+        setFormData({
+          patient_name: "",
+          email: "",
+          phone: "",
+          doctor: "",
+          appointmentdate: "",
+          appointmentslot: "",
+          message: "",
+        });
+      } else {
+        toast.error("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error("Something went wrong. Please try again.");
+    }
+
+   
   };
 
   return (
@@ -61,9 +83,9 @@ const Appointment = () => {
               <label className="block text-gray-700 dark:text-white font-semibold mb-2" htmlFor="name">Full Name*</label>
               <input
                 type="text"
-                name="name"
+                name="patient_name"
                 id="name"
-                value={formData.name}
+                value={formData.patient_name}
                 onChange={handleChange}
                 className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
                 placeholder="Enter patient name"
@@ -124,9 +146,9 @@ const Appointment = () => {
               <label className="block text-gray-700 dark:text-white font-semibold mb-2" htmlFor="date">Appointment Date*</label>
               <input
                 type="date"
-                name="date"
-                id="date"
-                value={formData.date}
+                name="appointmentdate"
+                id="appointmentdate"
+                value={formData.appointmentdate}
                 onChange={handleChange}
                 className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
                 required
@@ -137,9 +159,9 @@ const Appointment = () => {
             <div>
               <label className="block text-gray-700 dark:text-white font-semibold mb-2" htmlFor="doctor">Select Slot*</label>
               <select
-                name="slot"
-                id="slot"
-                value={formData.slot}
+                name="appointmentslot"
+                id="appointmentslot"
+                value={formData.appointmentslot}
                 onChange={handleChange}
                 className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
                 required
@@ -171,6 +193,7 @@ const Appointment = () => {
             <button
               type="submit"
               className="bg-blue-800 text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-500 transition duration-300 dark:bg-white dark:text-blue-600 dark:hover:bg-blue-500 hover:dark:text-blue-500 hover:dark:bg-gray-100"
+              onClick={handleSubmit}
             >
               Submit Appointment Request
             </button>

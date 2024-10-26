@@ -43,7 +43,7 @@ const Navbar = () => {
               <MdAddCall /> +91-9681275415
             </span>
             <span className="flex items-center gap-1">
-              <MdOutlineEmail /> info@pulsehospital.com
+              <MdOutlineEmail /> khanammar151@gmail.com
             </span>
           </div>
           <div>
@@ -80,6 +80,17 @@ const Navbar = () => {
               <div className=" flex items-center gap-8">
                 <div className="flex space-x-4">
                   {
+                    location.pathname == "/admin" ? (
+                        <>
+                        {
+                          location.pathname !== "/admin" &&(
+                       <Link to={"/admin"} className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold">Admin</Link> 
+                          )
+                        }
+                        </>
+                    ) : (
+                      <>
+                      {
                     location.pathname !== "/" &&(
                       <Link
                         to="/"
@@ -123,7 +134,7 @@ const Navbar = () => {
                   {
                   location.pathname !== "/news" &&(
                      <Link
-                    to="/under-construction"
+                    to="/news"
                     className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold
                     "
                   >
@@ -151,6 +162,12 @@ const Navbar = () => {
                     Contact
                   </Link>)
                  }
+
+                      </>
+                    )
+                  }
+                 
+
                 </div>
                 <button
                   onClick={toggleTheme}
