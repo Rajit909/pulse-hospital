@@ -7,6 +7,7 @@ import { API_END_POINT_NEWS } from "../api/Global";
 
 const News = () => {
 
+<<<<<<< HEAD
   // const [data, setData] = useState("");
 
   // console.log(data)
@@ -46,6 +47,47 @@ const News = () => {
             desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit Lorem ipsum dolor, sit amet consectetur adipisicing elit. "
         },
     ]
+=======
+  const [data, setData] = useState("");
+
+  console.log(data)
+
+  useEffect(() => {
+  fetch(`${API_END_POINT_NEWS}`)
+  .then((response) => response.json())
+  .then((data) => setData(data))
+  .catch((error) => console.log("Error fetching data", error));
+  }
+  , []);
+
+    // const news = [
+    //     {
+    //         id: 1,
+    //         title: "News Title",
+    //         desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit "
+    //     },
+    //     {
+    //         id: 2,
+    //         title: "News Title",
+    //         desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit Lorem ipsum dolor, sit amet consectetur adipisicing elit"
+    //     },
+    //     {
+    //         id: 3,
+    //         title: "News Title",
+    //         desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+    //     },
+    //     {
+    //         id: 4,                
+    //         title: "News Title",
+    //         desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit Lorem ipsum dolor, sit amet consectetur adipisicing elit"
+    //     },
+    //     {
+    //         id: 6,
+    //         title: "News Title",
+    //         desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit Lorem ipsum dolor, sit amet consectetur adipisicing elit. "
+    //     },
+    // ]
+>>>>>>> ee27f2c23862f068f2de3d0ece9a411c07203248
 
   return (
     <>
@@ -65,6 +107,7 @@ const News = () => {
           </div>
         
             {
+<<<<<<< HEAD
                  news.map((item) => {
                   return (
                       <div key={item.id}>
@@ -72,6 +115,23 @@ const News = () => {
                       </div>
                   )
             })}
+=======
+             <>
+              {
+                data && data.map((item, idx)=>{
+                  return (
+                    <NewsCard
+                      key={idx}
+                      newsId={item.id}
+                      title={item.title}
+                      desc={item.descr}
+                    />
+                  )
+                })
+              }
+             </>
+            }
+>>>>>>> ee27f2c23862f068f2de3d0ece9a411c07203248
         </div>
       </div>
 
