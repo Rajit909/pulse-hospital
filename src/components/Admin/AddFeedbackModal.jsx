@@ -4,55 +4,59 @@ import { API_END_POINT_ADD_FEEDBACK } from "../../api/Global";
 
 const AddFeedbackModal = ({ closeModal }) => {
   const [formData, setFormData] = useState({
+    file: null,
     patient_name: "",
     feedback: "",
-    patient_img_url: ""
   });
 
   console.log(formData);
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value, files } = e.target;
+    if (name === "file") {
+      setFormData({ ...formData, file: files[0] });
+    } else {
+      setFormData({ ...formData, [name]: value });
+    }
   };
 
-  const handleSubmit = async (e) => { 
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`${API_END_POINT_ADD_FEEDBACK}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+        const formDataToSend = new FormData();
+        formDataToSend.append("file", formData.file); // Attach file
+        formDataToSend.append("patient_name", formData.patient_name);
+        formDataToSend.append("feedback", formData.feedback);
 
-      if(!response.ok){
-        throw new Error("Failed to add news!");
-      }
-  
+        const response = await fetch(`${API_END_POINT_ADD_FEEDBACK}`, {
+            method: "POST",
+            body: formDataToSend,
+        });
 
-      const data = await response.json();
-      console.log("data response",data);
-      if (data.success) {
-        toast("Feedback added successfully!", {
-          type: "success",
-          position: "bottom-right",
-        });
-        closeModal();
-      } else {
-        toast("Failed to add feedback!",  {
-          type: "error",
-          position: "bottom-right",
-        });
-      }
+        const data = await response.json();
+
+        if (data.success) {
+            toast("Feedback added successfully!", {
+                type: "success",
+                position: "bottom-right",
+            });
+            closeModal();
+        } else {
+            toast("Failed to add feedback!", {
+                type: "error",
+                position: "bottom-right",
+            });
+        }
     } catch (error) {
-      console.log(error);
-      toast("Failed to add feedback!",  {
-        type: "error",
-        position: "bottom-right",
-      })
+        console.log("Error Response:", error);
+        toast("Unexpected response format. Please check the backend.", {
+            type: "error",
+            position: "bottom-right",
+        });
     }
-  }
+};
+
+
   return (  
     <>
       <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-75">
@@ -98,14 +102,16 @@ const AddFeedbackModal = ({ closeModal }) => {
                       className="block text-gray-700 dark:text-white font-semibold mb-1"
                       htmlFor="name"
                     >
-                      Patient Image Url:
+                      Patient Image :
                     </label>
                     <input
-                      name="patient_img_url"
-                      value={formData.patient_img_url}
+                      type="file"
+                      name="file"
+                      id="file"
                       onChange={handleChange}
                       className="w-full px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 text-gray-500"
                       placeholder="Enter patient_name..."
+                      accept="image/*"
                     />
                   </div>
                     

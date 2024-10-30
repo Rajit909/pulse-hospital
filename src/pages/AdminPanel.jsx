@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { CiDark } from "react-icons/ci";
-import { MdEvent, MdHandshake, MdLightMode, MdOutlineFeedback } from "react-icons/md";
+import {
+  MdEvent,
+  MdHandshake,
+  MdLightMode,
+  MdOutlineFeedback,
+} from "react-icons/md";
 import { RiChatVoiceFill, RiMenu2Line } from "react-icons/ri";
 import { RxCross1 } from "react-icons/rx";
 import AdminProfile from "../components/Admin/AdminProfile";
@@ -9,13 +14,26 @@ import AdminUpdates from "../components/Admin/AdminUpdates";
 import AdminAppointments from "../components/Admin/AdminAppointments";
 import AdminTestimonials from "../components/Admin/AdminTestimonials";
 import AdminFeedBacks from "../components/Admin/AdminFeedBacks";
-import { IoIosLogOut, IoIosNotificationsOutline } from "react-icons/io";
-import { CgProfile } from "react-icons/cg";
+import { IoIosNotificationsOutline } from "react-icons/io";
+import DropDown from "../components/DropDown";
+import { API_END_POINT_GET_USER } from "../api/Global";
+import AdminDashboard from "../components/Admin/AdminDashboard";
 
-const AdminDashboard = () => {
+const AdminPanel = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   const [activeMenu, setActiveMenu] = useState("Dashboard");
+  const [user, setUser] = useState([]);
+
+
+  // fetch user data
+  useEffect(() => {
+    fetch(`${API_END_POINT_GET_USER}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setUser(data);
+      });
+  }, []);
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -37,6 +55,12 @@ const AdminDashboard = () => {
 
   const renderContent = () => {
     switch (activeMenu) {
+      case "Dashboard":
+        return (
+          <div>
+           <AdminDashboard/>
+          </div>
+        );
       case "Profile":
         return (
           <div>
@@ -68,9 +92,11 @@ const AdminDashboard = () => {
           </div>
         );
       case "Feedbacks":
-        return <div>
-          <AdminFeedBacks />
-        </div>;
+        return (
+          <div>
+            <AdminFeedBacks />
+          </div>
+        );
       case "Logout":
         return <div>Logging out...</div>;
       default:
@@ -84,7 +110,7 @@ const AdminDashboard = () => {
       <div
         className={`fixed inset-y-0 left-0 transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        } md:translate-x-0 md:relative flex flex-col w-32 md:w-64 bg-slate-800 text-white md:bg-blue-800 md:dark:bg-darkbg md:border-r transition-transform duration-300 ease-in-out sidebar`}
+        } md:translate-x-0 md:relative flex flex-col w-32 md:w-64 bg-blue-800 bg-opacity-100 text-white md:bg-blue-800 md:dark:bg-darkbg md:border-r transition-transform duration-300 ease-in-out sidebar z-50`}
       >
         <div className="flex   h-16 bg-gray-900 md:hidden">
           <button className=" ml-5" onClick={toggleSidebar}>
@@ -100,13 +126,13 @@ const AdminDashboard = () => {
           {" "}
           <a
             href="#"
-            onClick={() => handleMenuClick("Profile")}
+            onClick={() => handleMenuClick("Dashboard")}
             className={`px-2 flex items-center justify-center gap-2 md:px-4 py-2 text-gray-100 hover:bg-gray-700 rounded ${
-              activeMenu === "Profile" ? "bg-gray-700" : ""
+              activeMenu === "Dashboard" ? "bg-gray-700" : ""
             }`}
           >
-            <CgProfile />
-            Profile
+            <MdEvent />
+            Dashboard
           </a>
           <a
             href="#"
@@ -158,16 +184,7 @@ const AdminDashboard = () => {
             <MdOutlineFeedback size={22} />
             Feedbacks
           </a>
-          <a
-            href="#"
-            onClick={() => handleMenuClick("Logout")}
-            className={`px-2 flex items-center justify-center gap-2 md:px-4 py-2 text-gray-100 hover:bg-gray-700 rounded ${
-              activeMenu === "Logout" ? "bg-gray-700" : ""
-            }`}
-          >
-            <IoIosLogOut />
-            Logout
-          </a>
+        
         </nav>
       </div>
 
@@ -183,17 +200,34 @@ const AdminDashboard = () => {
             <RiMenu2Line size={24} />
           </button>
           <div></div>
-          <button
-            onClick={toggleTheme}
-            className="text-xl font-bold bg-zinc-200 p-2 rounded-full cursor-pointer dark:text-white dark:bg-gray-900 dark:hover:text-white hover:dark:bg-[#1a83c6] text-black justify-self-end"
+          <div className="flex ">
+            <button
+              onClick={toggleTheme}
+              className="text-xl font-bold rounded-full dark:p-2 bg-zinc-100 p-[5px] cursor-pointer dark:text-white dark:bg-gray-900 dark:hover:text-white hover:dark:bg-[#1a83c6] text-black justify-self-end"
+            >
+              {theme === "light" ? <CiDark size={25}/> : <MdLightMode />}
+            </button>
+
+            {/* <a
+            href="#"
+            onClick={() => handleMenuClick("Profile")}
+            className={`px-2 flex items-center justify-center gap-2 md:px-4 py-2 text-gray-100 hover:bg-gray-700 rounded
+            }`}
           >
-            {theme === "light" ? <CiDark /> : <MdLightMode />}
-          </button>
+            <CgProfile />
+            Profile
+          </a> */}
+            <div className=" mt-[1px] ml-1">
+            <DropDown user={user} />
+            </div>
+          </div>
         </div>
 
         {/* Main Page Content */}
         <div className="p-4 w-full">
-              <h1 className="text-2xl font-bold">Admin Dashboard</h1>
+          <h1 className="text-2xl font-bold">Welcome back <span className=" uppercase">
+            {}
+            </span> </h1>
           <div className="mx-auto">
             <div className=" py-5 w-full">
               <h1 className="text-xl font-bold">{activeMenu}</h1>
@@ -206,4 +240,4 @@ const AdminDashboard = () => {
   );
 };
 
-export default AdminDashboard;
+export default AdminPanel;

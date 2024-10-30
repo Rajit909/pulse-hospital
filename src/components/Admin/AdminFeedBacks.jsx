@@ -32,7 +32,7 @@ const AdminFeedBacks = () => {
 
       <div className="container mx-auto">
         <h2 className=" text-xl md:text-3xl font-bold text-center text-gray-800 dark:text-white my-4">
-         Events  List
+         Feedbacks  List
         </h2>
       </div>
         <div className="mx-auto pt-10">

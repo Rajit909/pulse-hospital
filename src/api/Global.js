@@ -1,7 +1,10 @@
 export const API_END_POINT = "http://localhost/myapi/get-data.php"; //localhost
 //auth api
+export const API_END_POINT_CHECK_SESSION  = "http://localhost/auth-api/checkSession.php"; //localhost
 export const API_END_POINT_SIGNIN = "http://localhost/auth-api/signin.php"; //localhost
 export const API_END_POINT_SIGNUP = "http://localhost/auth-api/signup.php"; //localhost
+export const API_END_POINT_LOGOUT = "http://localhost/auth-api/logout.php"; //localhost
+
 // news api
 export const API_END_POINT_NEWS = "http://localhost/myapi/news-api.php"; //localhost
 export const API_END_POINT_ADD_NEWS = "http://localhost/myapi/addnews-api.php"; //localhost
@@ -21,5 +24,9 @@ export const API_END_POINT_ADD_FEEDBACK = "http://localhost/myapi/addfeedback-ap
 // event api
 export const API_END_POINT_GET_EVENT = "http://localhost/myapi/event-api.php"; //localhost
 export const API_END_POINT_ADD_EVENT = "http://localhost/myapi/addevent-api.php"; //localhost
+
+
+// users api
+export const API_END_POINT_GET_USER = "http://localhost/myapi/getUser.php"; //localhost
 
 // export const API_END_POINT="https://sheelinfotech.in/demo/api/get-data.php";//hosted api
