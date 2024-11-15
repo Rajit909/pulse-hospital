@@ -13,11 +13,16 @@ import EventsPage from "./pages/EventsPage";
 import UnderConstruction from "./components/shared/UnderConstruction";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
+<<<<<<< HEAD
 import AdminPanel from "./pages/AdminPanel";
 import Admin from "./components/Admin/Admin";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
+=======
+import AdminDashboard from "./pages/AdminDashboard";
+import Admin from "./components/Admin";
+>>>>>>> ee27f2c23862f068f2de3d0ece9a411c07203248
 
 
 function App() {
@@ -74,14 +79,22 @@ function App() {
     },
     {
       path: "/admindashboard",
+<<<<<<< HEAD
       element: 
           <AdminPanel/>
       
+=======
+      element: <AdminDashboard/>
+>>>>>>> ee27f2c23862f068f2de3d0ece9a411c07203248
     },
     {
       path: "/admin",
       element: <Admin/>
+<<<<<<< HEAD
     },
+=======
+    }
+>>>>>>> ee27f2c23862f068f2de3d0ece9a411c07203248
     
   ])
   return (

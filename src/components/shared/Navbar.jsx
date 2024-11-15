@@ -163,9 +163,13 @@ const Navbar = () => {
                   </Link>)
                  }
 
+<<<<<<< HEAD
                       </>
                     )
                   }
+=======
+                 {/* <Link to={"/admin"} className="text-gray-800 dark:text-white hover:text-blue-600 font-semibold">Admin</Link> */}
+>>>>>>> ee27f2c23862f068f2de3d0ece9a411c07203248
                  
 
                 </div>
